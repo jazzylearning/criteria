@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Failure Telemonitoring Studies - Clinical Protocol Guide</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .study-section { transition: all 0.3s ease; }
+        .study-section:hover { box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
+        @media print {
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+            body { font-size: 11pt; }
+        }
+        .criteria-table th { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; }
+        .criteria-table td { border: 1px solid #e5e7eb; padding: 12px; }
+        .blood-test-box { background: linear-gradient(135deg, #dc2626 0%, #f97316 100%); }
+        .stability-box { background: linear-gradient(135deg, #059669 0%, #10b981 100%); }
+        .role-box { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); }
+        .intervention-timeline { border-left: 4px solid #3b82f6; }
+        .highlight-box { border-left: 4px solid #f59e0b; background: #fffbeb; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Language Selector -->
+    <div class="bg-gradient-to-r from-blue-900 to-indigo-900 text-white py-3 no-print sticky top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center flex-wrap gap-2">
+            <span class="font-bold text-lg">🫀 HF Telemonitoring Clinical Protocol Guide</span>
+            <div class="flex gap-2 flex-wrap">
+                <button onclick="setLanguage('en')" class="btn btn-sm bg-white/20 hover:bg-white/30 border-white/30" id="btn-en">🇬🇧 English</button>
+                <button onclick="setLanguage('de')" class="btn btn-sm bg-white/20 hover:bg-white/30 border-white/30" id="btn-de">🇩🇪 Deutsch</button>
+                <button onclick="setLanguage('fr')" class="btn btn-sm bg-white/20 hover:bg-white/30 border-white/30" id="btn-fr">🇫🇷 Français</button>
+                <button onclick="setLanguage('it')" class="btn btn-sm bg-white/20 hover:bg-white/30 border-white/30" id="btn-it">🇮🇹 Italiano</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-blue-800 via-indigo-800 to-purple-800 text-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="lang-content active" data-lang="en">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Heart Failure Telemonitoring Studies</h1>
+                <h2 class="text-2xl opacity-90 mb-6">Comprehensive Clinical Protocol Guide</h2>
+                <p class="text-lg opacity-80 max-w-3xl mx-auto">Detailed analysis of inclusion criteria, stability assessment, blood tests, patient stratification, and intervention protocols with specific nurse vs. physician roles</p>
+            </div>
+            <div class="lang-content" data-lang="de">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Herzinsuffizienz-Telemonitoring-Studien</h1>
+                <h2 class="text-2xl opacity-90 mb-6">Umfassender Klinischer Protokollleitfaden</h2>
+                <p class="text-lg opacity-80 max-w-3xl mx-auto">Detaillierte Analyse der Einschlusskriterien, Stabilitätsbewertung, Blutuntersuchungen, Patientenstratifizierung und Interventionsprotokolle mit spezifischen Rollen für Pflegekräfte und Ärzte</p>
+            </div>
+            <div class="lang-content" data-lang="fr">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Études de Télésurveillance de l'Insuffisance Cardiaque</h1>
+                <h2 class="text-2xl opacity-90 mb-6">Guide Complet des Protocoles Cliniques</h2>
+                <p class="text-lg opacity-80 max-w-3xl mx-auto">Analyse détaillée des critères d'inclusion, évaluation de la stabilité, analyses sanguines, stratification des patients et protocoles d'intervention avec rôles spécifiques infirmier vs. médecin</p>
+            </div>
+            <div class="lang-content" data-lang="it">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Studi di Telemonitoraggio dello Scompenso Cardiaco</h1>
+                <h2 class="text-2xl opacity-90 mb-6">Guida Completa ai Protocolli Clinici</h2>
+                <p class="text-lg opacity-80 max-w-3xl mx-auto">Analisi dettagliata dei criteri di inclusione, valutazione della stabilità, esami del sangue, stratificazione dei pazienti e protocolli di intervento con ruoli specifici infermiere vs. medico</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Navigation -->
+    <nav class="bg-white shadow-lg py-4 no-print sticky top-12 z-40">
+        <div class="container mx-auto px-4">
+            <div class="flex overflow-x-auto gap-3 pb-2">
+                <a href="#stability" class="btn btn-sm btn-outline btn-success whitespace-nowrap">📊 Stability Criteria</a>
+                <a href="#blood-tests" class="btn btn-sm btn-outline btn-error whitespace-nowrap">🩸 Blood Tests</a>
+                <a href="#roles" class="btn btn-sm btn-outline btn-secondary whitespace-nowrap">👩‍⚕️ Nurse vs Doctor</a>
+                <a href="#tele-hf" class="btn btn-sm btn-outline whitespace-nowrap">Tele-HF</a>
+                <a href="#tim-hf" class="btn btn-sm btn-outline whitespace-nowrap">TIM-HF</a>
+                <a href="#tim-hf2" class="btn btn-sm btn-outline whitespace-nowrap">TIM-HF2</a>
+                <a href="#telesat" class="btn btn-sm btn-outline whitespace-nowrap">TELESAT</a>
+                <a href="#herzmobil" class="btn btn-sm btn-outline whitespace-nowrap">HerzMobil</a>
+                <a href="#netherlands" class="btn btn-sm btn-outline whitespace-nowrap">Netherlands</a>
+                <a href="#nurse-gdmt" class="btn btn-sm btn-outline whitespace-nowrap">Nurse-Led GDMT</a>
+                <a href="#beat-hf" class="btn btn-sm btn-outline whitespace-nowrap">BEAT-HF</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        
+        <!-- SECTION: STABILITY CRITERIA OVERVIEW -->
+        <section id="stability" class="mb-16">
+            <div class="stability-box text-white rounded-2xl p-8 shadow-xl">
+                <div class="lang-content active" data-lang="en">
+                    <h2 class="text-3xl font-bold mb-6">📊 Clinical Stability Assessment Criteria</h2>
+                    <p class="text-lg mb-6 opacity-90">How studies differentiated between STABLE and UNSTABLE heart failure patients</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">✅ STABLE Patient Criteria</h3>
+                            <ul class="space-y-2">
+                                <li>• <strong>NYHA Class:</strong> II-III (not class IV at rest)</li>
+                                <li>• <strong>No recent hospitalization:</strong> ≥7 days since discharge</li>
+                                <li>• <strong>No IV diuretics:</strong> In past 7-30 days</li>
+                                <li>• <strong>Stable vital signs:</strong> SBP ≥90 mmHg</li>
+                                <li>• <strong>No planned procedures:</strong> No scheduled cardiac interventions</li>
+                                <li>• <strong>On optimized GDMT:</strong> Stable medication regimen</li>
+                                <li>• <strong>Mental health:</strong> PHQ-9 ≤9 (TIM-HF2 criterion)</li>
+                                <li>• <strong>Stable weight:</strong> No rapid weight gain (>2kg/3 days)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">⚠️ UNSTABLE Patient Indicators</h3>
+                            <ul class="space-y-2">
+                                <li>• <strong>NYHA Class IV:</strong> Symptoms at rest</li>
+                                <li>• <strong>Recent decompensation:</strong> IV diuretics needed</li>
+                                <li>• <strong>Hypotension:</strong> SBP <90 mmHg</li>
+                                <li>• <strong>Severe bradycardia:</strong> HR <50 bpm</li>
+                                <li>• <strong>Acute kidney injury:</strong> Creatinine increase >0.5 mg/dL</li>
+                                <li>• <strong>Electrolyte imbalance:</strong> K+ >5.5 or <3.5 mEq/L</li>
+                                <li>• <strong>Rapid weight gain:</strong> >2 kg in 3 days</li>
+                                <li>• <strong>Worsening symptoms:</strong> Dyspnea, edema progression</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="de">
+                    <h2 class="text-3xl font-bold mb-6">📊 Kriterien zur Bewertung der Klinischen Stabilität</h2>
+                    <p class="text-lg mb-6 opacity-90">Wie Studien zwischen STABILEN und INSTABILEN Herzinsuffizienz-Patienten unterschieden</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">✅ Kriterien für STABILE Patienten</h3>
+                            <ul class="space-y-2">
+                                <li>• <strong>NYHA-Klasse:</strong> II-III (nicht Klasse IV in Ruhe)</li>
+                                <li>• <strong>Keine kürzliche Hospitalisierung:</strong> ≥7 Tage seit Entlassung</li>
+                                <li>• <strong>Keine IV-Diuretika:</strong> In den letzten 7-30 Tagen</li>
+                                <li>• <strong>Stabile Vitalzeichen:</strong> SBP ≥90 mmHg</li>
+                                <li>• <strong>Keine geplanten Eingriffe:</strong> Keine geplanten Herzinterventionen</li>
+                                <li>• <strong>Optimierte GDMT:</strong> Stabiles Medikamentenregime</li>
+                                <li>• <strong>Psychische Gesundheit:</strong> PHQ-9 ≤9 (TIM-HF2 Kriterium)</li>
+                                <li>• <strong>Stabiles Gewicht:</strong> Keine schnelle Gewichtszunahme (>2kg/3 Tage)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">⚠️ Indikatoren für INSTABILE Patienten</h3>
+                            <ul class="space-y-2">
+                                <li>• <strong>NYHA-Klasse IV:</strong> Symptome in Ruhe</li>
+                                <li>• <strong>Kürzliche Dekompensation:</strong> IV-Diuretika erforderlich</li>
+                                <li>• <strong>Hypotonie:</strong> SBP <90 mmHg</li>
+                                <li>• <strong>Schwere Bradykardie:</strong> HF <50 bpm</li>
+                                <li>• <strong>Akute Nierenschädigung:</strong> Kreatinin-Anstieg >0,5 mg/dL</li>
+                                <li>• <strong>Elektrolytstörung:</strong> K+ >5,5 oder <3,5 mEq/L</li>
+                                <li>• <strong>Schnelle Gewichtszunahme:</strong> >2 kg in 3 Tagen</li>
+                                <li>• <strong>Verschlechternde Symptome:</strong> Dyspnoe, Ödem-Progression</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="fr">
+                    <h2 class="text-3xl font-bold mb-6">📊 Critères d'Évaluation de la Stabilité Clinique</h2>
+                    <p class="text-lg mb-6 opacity-90">Comment les études ont différencié les patients STABLES des patients INSTABLES</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">✅ Critères Patient STABLE</h3>
+                            <ul class="space-y-2">
+                                <li>• <strong>Classe NYHA:</strong> II-III (pas classe IV au repos)</li>
+                                <li>• <strong>Pas d'hospitalisation récente:</strong> ≥7 jours depuis sortie</li>
+                                <li>• <strong>Pas de diurétiques IV:</strong> Dans les 7-30 derniers jours</li>
+                                <li>• <strong>Signes vitaux stables:</strong> PAS ≥90 mmHg</li>
+                                <li>• <strong>Pas d'interventions planifiées:</strong> Pas de procédures cardiaques prévues</li>
+                                <li>• <strong>GDMT optimisé:</strong> Régime médicamenteux stable</li>
+                                <li>• <strong>Santé mentale:</strong> PHQ-9 ≤9 (critère TIM-HF2)</li>
+                                <li>• <strong>Poids stable:</strong> Pas de prise de poids rapide (>2kg/3 jours)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">⚠️ Indicateurs Patient INSTABLE</h3>
+                            <ul class="space-y-2">
+                                <li>• <strong>Classe NYHA IV:</strong> Symptômes au repos</li>
+                                <li>• <strong>Décompensation récente:</strong> Diurétiques IV nécessaires</li>
+                                <li>• <strong>Hypotension:</strong> PAS <90 mmHg</li>
+                                <li>• <strong>Bradycardie sévère:</strong> FC <50 bpm</li>
+                                <li>• <strong>Insuffisance rénale aiguë:</strong> Augmentation créatinine >0,5 mg/dL</li>
+                                <li>• <strong>Déséquilibre électrolytique:</strong> K+ >5,5 ou <3,5 mEq/L</li>
+                                <li>• <strong>Prise de poids rapide:</strong> >2 kg en 3 jours</li>
+                                <li>• <strong>Aggravation des symptômes:</strong> Dyspnée, progression œdème</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="it">
+                    <h2 class="text-3xl font-bold mb-6">📊 Criteri di Valutazione della Stabilità Clinica</h2>
+                    <p class="text-lg mb-6 opacity-90">Come gli studi hanno differenziato tra pazienti STABILI e INSTABILI</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">✅ Criteri Paziente STABILE</h3>
+                            <ul class="space-y-2">
+                                <li>• <strong>Classe NYHA:</strong> II-III (non classe IV a riposo)</li>
+                                <li>• <strong>Nessun ricovero recente:</strong> ≥7 giorni dalla dimissione</li>
+                                <li>• <strong>Nessun diuretico IV:</strong> Negli ultimi 7-30 giorni</li>
+                                <li>• <strong>Segni vitali stabili:</strong> PAS ≥90 mmHg</li>
+                                <li>• <strong>Nessuna procedura pianificata:</strong> Nessun intervento cardiaco programmato</li>
+                                <li>• <strong>GDMT ottimizzata:</strong> Regime farmacologico stabile</li>
+                                <li>• <strong>Salute mentale:</strong> PHQ-9 ≤9 (criterio TIM-HF2)</li>
+                                <li>• <strong>Peso stabile:</strong> Nessun aumento rapido di peso (>2kg/3 giorni)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">⚠️ Indicatori Paziente INSTABILE</h3>
+                            <ul class="space-y-2">
+                                <li>• <strong>Classe NYHA IV:</strong> Sintomi a riposo</li>
+                                <li>• <strong>Scompenso recente:</strong> Diuretici IV necessari</li>
+                                <li>• <strong>Ipotensione:</strong> PAS <90 mmHg</li>
+                                <li>• <strong>Bradicardia severa:</strong> FC <50 bpm</li>
+                                <li>• <strong>Danno renale acuto:</strong> Aumento creatinina >0,5 mg/dL</li>
+                                <li>• <strong>Squilibrio elettrolitico:</strong> K+ >5,5 o <3,5 mEq/L</li>
+                                <li>• <strong>Aumento rapido di peso:</strong> >2 kg in 3 giorni</li>
+                                <li>• <strong>Peggioramento sintomi:</strong> Dispnea, progressione edema</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: BLOOD TESTS -->
+        <section id="blood-tests" class="mb-16">
+            <div class="blood-test-box text-white rounded-2xl p-8 shadow-xl">
+                <div class="lang-content active" data-lang="en">
+                    <h2 class="text-3xl font-bold mb-6">🩸 Blood Tests & Laboratory Parameters</h2>
+                    <p class="text-lg mb-6 opacity-90">Specific laboratory criteria used across telemonitoring studies</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full bg-white text-gray-800 rounded-xl overflow-hidden">
+                            <thead>
+                                <tr class="bg-red-800 text-white">
+                                    <th class="p-4 text-left">Parameter</th>
+                                    <th class="p-4 text-left">Normal/Target Range</th>
+                                    <th class="p-4 text-left">Alert Threshold</th>
+                                    <th class="p-4 text-left">Action Required</th>
+                                    <th class="p-4 text-left">Frequency</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">NT-proBNP</td>
+                                    <td class="p-4"><300 pg/mL (rule out HF)</td>
+                                    <td class="p-4 text-red-600 font-bold">>1000 pg/mL (inclusion)<br>>2000 pg/mL (high risk)</td>
+                                    <td class="p-4">Medication optimization, close monitoring</td>
+                                    <td class="p-4">Baseline, 3-6 monthly, as needed</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">BNP</td>
+                                    <td class="p-4"><100 pg/mL (rule out HF)</td>
+                                    <td class="p-4 text-red-600 font-bold">>100 pg/mL (inclusion)<br>>400 pg/mL (high risk)</td>
+                                    <td class="p-4">Diuretic adjustment, physician review</td>
+                                    <td class="p-4">Baseline, as clinically indicated</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Creatinine</td>
+                                    <td class="p-4">0.7-1.3 mg/dL (men)<br>0.6-1.1 mg/dL (women)</td>
+                                    <td class="p-4 text-red-600 font-bold">>2.5 mg/dL or increase >0.5 mg/dL</td>
+                                    <td class="p-4">GDMT dose reduction, hold ACEi/ARB if severe</td>
+                                    <td class="p-4">Baseline, 2-4 weeks post-titration</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">eGFR (CKD-EPI)</td>
+                                    <td class="p-4">>60 mL/min/1.73m²</td>
+                                    <td class="p-4 text-red-600 font-bold"><30 mL/min/1.73m² (exclusion in some studies)<br><60 = high risk subgroup</td>
+                                    <td class="p-4">Cautious GDMT titration, more frequent monitoring</td>
+                                    <td class="p-4">Baseline stratification, quarterly</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Potassium (K+)</td>
+                                    <td class="p-4">3.5-5.0 mEq/L</td>
+                                    <td class="p-4 text-red-600 font-bold">>5.5 mEq/L (hyperkalemia)<br><3.5 mEq/L (hypokalemia)</td>
+                                    <td class="p-4">Hold/reduce MRA, ACEi/ARB; supplement if low</td>
+                                    <td class="p-4">Baseline, 1-2 weeks post-MRA start</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Sodium (Na+)</td>
+                                    <td class="p-4">136-145 mEq/L</td>
+                                    <td class="p-4 text-red-600 font-bold"><130 mEq/L (severe hyponatremia)</td>
+                                    <td class="p-4">Fluid restriction, diuretic adjustment</td>
+                                    <td class="p-4">Baseline, as clinically indicated</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Hemoglobin</td>
+                                    <td class="p-4">12-16 g/dL (women)<br>14-18 g/dL (men)</td>
+                                    <td class="p-4 text-red-600 font-bold"><10 g/dL (anemia)</td>
+                                    <td class="p-4">Iron supplementation, EPO if indicated</td>
+                                    <td class="p-4">Baseline, 3-6 monthly</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Ferritin</td>
+                                    <td class="p-4">100-300 ng/mL</td>
+                                    <td class="p-4 text-red-600 font-bold"><100 ng/mL (iron deficiency)</td>
+                                    <td class="p-4">IV iron replacement (FCM)</td>
+                                    <td class="p-4">Baseline, annually</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="de">
+                    <h2 class="text-3xl font-bold mb-6">🩸 Blutuntersuchungen & Laborparameter</h2>
+                    <p class="text-lg mb-6 opacity-90">Spezifische Laborkriterien in Telemonitoring-Studien</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full bg-white text-gray-800 rounded-xl overflow-hidden">
+                            <thead>
+                                <tr class="bg-red-800 text-white">
+                                    <th class="p-4 text-left">Parameter</th>
+                                    <th class="p-4 text-left">Normal/Zielbereich</th>
+                                    <th class="p-4 text-left">Alarmschwelle</th>
+                                    <th class="p-4 text-left">Erforderliche Maßnahme</th>
+                                    <th class="p-4 text-left">Häufigkeit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">NT-proBNP</td>
+                                    <td class="p-4"><300 pg/mL (HI ausschließen)</td>
+                                    <td class="p-4 text-red-600 font-bold">>1000 pg/mL (Einschluss)<br>>2000 pg/mL (hohes Risiko)</td>
+                                    <td class="p-4">Medikamentenoptimierung, enge Überwachung</td>
+                                    <td class="p-4">Baseline, 3-6 monatlich, bei Bedarf</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">BNP</td>
+                                    <td class="p-4"><100 pg/mL (HI ausschließen)</td>
+                                    <td class="p-4 text-red-600 font-bold">>100 pg/mL (Einschluss)<br>>400 pg/mL (hohes Risiko)</td>
+                                    <td class="p-4">Diuretika-Anpassung, Arztüberprüfung</td>
+                                    <td class="p-4">Baseline, klinisch indiziert</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Kreatinin</td>
+                                    <td class="p-4">0,7-1,3 mg/dL (Männer)<br>0,6-1,1 mg/dL (Frauen)</td>
+                                    <td class="p-4 text-red-600 font-bold">>2,5 mg/dL oder Anstieg >0,5 mg/dL</td>
+                                    <td class="p-4">GDMT-Dosisreduktion, ACEi/ARB pausieren wenn schwer</td>
+                                    <td class="p-4">Baseline, 2-4 Wochen nach Titration</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">eGFR (CKD-EPI)</td>
+                                    <td class="p-4">>60 mL/min/1,73m²</td>
+                                    <td class="p-4 text-red-600 font-bold"><30 mL/min/1,73m² (Ausschluss)<br><60 = Hochrisiko-Subgruppe</td>
+                                    <td class="p-4">Vorsichtige GDMT-Titration, häufigere Kontrolle</td>
+                                    <td class="p-4">Baseline-Stratifizierung, vierteljährlich</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Kalium (K+)</td>
+                                    <td class="p-4">3,5-5,0 mEq/L</td>
+                                    <td class="p-4 text-red-600 font-bold">>5,5 mEq/L (Hyperkaliämie)<br><3,5 mEq/L (Hypokaliämie)</td>
+                                    <td class="p-4">MRA, ACEi/ARB pausieren/reduzieren; supplementieren wenn niedrig</td>
+                                    <td class="p-4">Baseline, 1-2 Wochen nach MRA-Start</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Natrium (Na+)</td>
+                                    <td class="p-4">136-145 mEq/L</td>
+                                    <td class="p-4 text-red-600 font-bold"><130 mEq/L (schwere Hyponatriämie)</td>
+                                    <td class="p-4">Flüssigkeitsrestriktion, Diuretika-Anpassung</td>
+                                    <td class="p-4">Baseline, klinisch indiziert</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="fr">
+                    <h2 class="text-3xl font-bold mb-6">🩸 Analyses Sanguines & Paramètres de Laboratoire</h2>
+                    <p class="text-lg mb-6 opacity-90">Critères de laboratoire spécifiques utilisés dans les études de télésurveillance</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full bg-white text-gray-800 rounded-xl overflow-hidden">
+                            <thead>
+                                <tr class="bg-red-800 text-white">
+                                    <th class="p-4 text-left">Paramètre</th>
+                                    <th class="p-4 text-left">Plage Normale/Cible</th>
+                                    <th class="p-4 text-left">Seuil d'Alerte</th>
+                                    <th class="p-4 text-left">Action Requise</th>
+                                    <th class="p-4 text-left">Fréquence</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">NT-proBNP</td>
+                                    <td class="p-4"><300 pg/mL (exclure IC)</td>
+                                    <td class="p-4 text-red-600 font-bold">>1000 pg/mL (inclusion)<br>>2000 pg/mL (haut risque)</td>
+                                    <td class="p-4">Optimisation médicamenteuse, surveillance étroite</td>
+                                    <td class="p-4">Baseline, 3-6 mensuel, selon besoin</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Créatinine</td>
+                                    <td class="p-4">0,7-1,3 mg/dL (hommes)<br>0,6-1,1 mg/dL (femmes)</td>
+                                    <td class="p-4 text-red-600 font-bold">>2,5 mg/dL ou augmentation >0,5 mg/dL</td>
+                                    <td class="p-4">Réduction dose GDMT, suspendre IEC/ARA si sévère</td>
+                                    <td class="p-4">Baseline, 2-4 semaines post-titration</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Potassium (K+)</td>
+                                    <td class="p-4">3,5-5,0 mEq/L</td>
+                                    <td class="p-4 text-red-600 font-bold">>5,5 mEq/L (hyperkaliémie)<br><3,5 mEq/L (hypokaliémie)</td>
+                                    <td class="p-4">Suspendre/réduire ARM, IEC/ARA; supplémenter si bas</td>
+                                    <td class="p-4">Baseline, 1-2 semaines après ARM</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="it">
+                    <h2 class="text-3xl font-bold mb-6">🩸 Esami del Sangue & Parametri di Laboratorio</h2>
+                    <p class="text-lg mb-6 opacity-90">Criteri di laboratorio specifici utilizzati negli studi di telemonitoraggio</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full bg-white text-gray-800 rounded-xl overflow-hidden">
+                            <thead>
+                                <tr class="bg-red-800 text-white">
+                                    <th class="p-4 text-left">Parametro</th>
+                                    <th class="p-4 text-left">Range Normale/Target</th>
+                                    <th class="p-4 text-left">Soglia di Allarme</th>
+                                    <th class="p-4 text-left">Azione Richiesta</th>
+                                    <th class="p-4 text-left">Frequenza</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">NT-proBNP</td>
+                                    <td class="p-4"><300 pg/mL (escludere SC)</td>
+                                    <td class="p-4 text-red-600 font-bold">>1000 pg/mL (inclusione)<br>>2000 pg/mL (alto rischio)</td>
+                                    <td class="p-4">Ottimizzazione farmacologica, monitoraggio stretto</td>
+                                    <td class="p-4">Baseline, 3-6 mensile, secondo necessità</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Creatinina</td>
+                                    <td class="p-4">0,7-1,3 mg/dL (uomini)<br>0,6-1,1 mg/dL (donne)</td>
+                                    <td class="p-4 text-red-600 font-bold">>2,5 mg/dL o aumento >0,5 mg/dL</td>
+                                    <td class="p-4">Riduzione dose GDMT, sospendere ACEi/ARB se severo</td>
+                                    <td class="p-4">Baseline, 2-4 settimane post-titolazione</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Potassio (K+)</td>
+                                    <td class="p-4">3,5-5,0 mEq/L</td>
+                                    <td class="p-4 text-red-600 font-bold">>5,5 mEq/L (iperkaliemia)<br><3,5 mEq/L (ipokaliemia)</td>
+                                    <td class="p-4">Sospendere/ridurre MRA, ACEi/ARB; supplementare se basso</td>
+                                    <td class="p-4">Baseline, 1-2 settimane dopo MRA</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: NURSE VS DOCTOR ROLES -->
+        <section id="roles" class="mb-16">
+            <div class="role-box text-white rounded-2xl p-8 shadow-xl">
+                <div class="lang-content active" data-lang="en">
+                    <h2 class="text-3xl font-bold mb-6">👩‍⚕️ Nurse vs. Physician Roles & Responsibilities</h2>
+                    <p class="text-lg mb-6 opacity-90">Detailed breakdown of WHO does WHAT and HOW OFTEN in telemonitoring programs</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- NURSE ROLE -->
+                        <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg">
+                            <h3 class="text-2xl font-bold text-purple-700 mb-4">👩‍⚕️ NURSE / Heart Failure Specialist Nurse</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">📊 Daily Monitoring Review</h4>
+                                    <p class="text-sm text-gray-600">Frequency: Daily (weekdays), reviews every transmitted alert</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Review weight, BP, HR, SpO2 data</li>
+                                        <li>• Identify alert triggers (weight >2kg/3 days)</li>
+                                        <li>• Document trends and variances</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">📞 Patient Contact & Education</h4>
+                                    <p class="text-sm text-gray-600">Frequency: Weekly to monthly telephone calls</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Structured health coaching calls</li>
+                                        <li>• Symptom assessment questionnaires</li>
+                                        <li>• Medication adherence counseling</li>
+                                        <li>• Self-care education (diet, fluid, exercise)</li>
+                                        <li>• Recognition of warning signs</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">💊 Medication Management (Under Protocol)</h4>
+                                    <p class="text-sm text-gray-600">Frequency: Every 2-4 weeks during titration</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Diuretic dose adjustment (per protocol)</li>
+                                        <li>• GDMT titration under physician supervision</li>
+                                        <li>• Medication reconciliation</li>
+                                        <li>• Side effect assessment</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">🏠 Home Visits (HerzMobil, some programs)</h4>
+                                    <p class="text-sm text-gray-600">Frequency: Post-discharge, weeks 1, 4, 12</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Device setup and training</li>
+                                        <li>• Physical assessment</li>
+                                        <li>• Equipment troubleshooting</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- PHYSICIAN ROLE -->
+                        <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg">
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-4">👨‍⚕️ PHYSICIAN / Cardiologist / GP</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">⚕️ Clinical Supervision</h4>
+                                    <p class="text-sm text-gray-600">Frequency: 24/7 availability (TIM-HF/TIM-HF2)</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Oversight of telemedical center operations</li>
+                                        <li>• Emergency medical support</li>
+                                        <li>• Complex case consultation</li>
+                                        <li>• Treatment protocol approval</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">💊 Medication Decisions</h4>
+                                    <p class="text-sm text-gray-600">Frequency: As needed, confirms nurse recommendations</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• GDMT prescription and major adjustments</li>
+                                        <li>• ACEi/ARB/ARNI initiation</li>
+                                        <li>• Beta-blocker titration approval</li>
+                                        <li>• MRA and SGLT2i decisions</li>
+                                        <li>• Device therapy recommendations</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">📋 Scheduled Reviews</h4>
+                                    <p class="text-sm text-gray-600">Frequency: Every 3 months minimum (TIM-HF2)</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Quarterly clinical assessments</li>
+                                        <li>• Lab result interpretation</li>
+                                        <li>• Echo/imaging review</li>
+                                        <li>• Risk stratification updates</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">🚨 Urgent/Emergency Care</h4>
+                                    <p class="text-sm text-gray-600">Frequency: Outside business hours, critical alerts</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Direct therapy institution (TIM-HF2)</li>
+                                        <li>• Hospital admission decisions</li>
+                                        <li>• Urgent medication changes</li>
+                                        <li>• Coordination with local physicians</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="de">
+                    <h2 class="text-3xl font-bold mb-6">👩‍⚕️ Rollen & Verantwortlichkeiten: Pflegekraft vs. Arzt</h2>
+                    <p class="text-lg mb-6 opacity-90">Detaillierte Aufschlüsselung: WER macht WAS und WIE OFT in Telemonitoring-Programmen</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg">
+                            <h3 class="text-2xl font-bold text-purple-700 mb-4">👩‍⚕️ PFLEGEKRAFT / HI-Fachpflegekraft</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">📊 Tägliche Überwachung</h4>
+                                    <p class="text-sm text-gray-600">Häufigkeit: Täglich (werktags)</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Überprüfung von Gewicht, Blutdruck, Herzfrequenz, SpO2</li>
+                                        <li>• Identifizierung von Alarmauslösern</li>
+                                        <li>• Dokumentation von Trends</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">📞 Patientenkontakt & Schulung</h4>
+                                    <p class="text-sm text-gray-600">Häufigkeit: Wöchentlich bis monatlich</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Strukturierte Gesundheitsberatung</li>
+                                        <li>• Symptombewertung</li>
+                                        <li>• Medikamentenadhärenz-Beratung</li>
+                                        <li>• Selbstpflege-Schulung</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">💊 Medikamentenmanagement</h4>
+                                    <p class="text-sm text-gray-600">Häufigkeit: Alle 2-4 Wochen während Titration</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Diuretika-Dosisanpassung (nach Protokoll)</li>
+                                        <li>• GDMT-Titration unter ärztlicher Aufsicht</li>
+                                        <li>• Nebenwirkungsbewertung</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg">
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-4">👨‍⚕️ ARZT / Kardiologe / Hausarzt</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">⚕️ Klinische Supervision</h4>
+                                    <p class="text-sm text-gray-600">Häufigkeit: 24/7 Verfügbarkeit</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Aufsicht über telemedizinisches Zentrum</li>
+                                        <li>• Notfall-Unterstützung</li>
+                                        <li>• Komplexe Fallberatung</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">💊 Medikamentenentscheidungen</h4>
+                                    <p class="text-sm text-gray-600">Häufigkeit: Nach Bedarf</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• GDMT-Verschreibung</li>
+                                        <li>• Betablocker-Titration</li>
+                                        <li>• Device-Therapie-Empfehlungen</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">📋 Geplante Überprüfungen</h4>
+                                    <p class="text-sm text-gray-600">Häufigkeit: Mindestens alle 3 Monate</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Vierteljährliche Bewertungen</li>
+                                        <li>• Laborergebnis-Interpretation</li>
+                                        <li>• Risikostratifizierung</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="fr">
+                    <h2 class="text-3xl font-bold mb-6">👩‍⚕️ Rôles & Responsabilités: Infirmier vs. Médecin</h2>
+                    <p class="text-lg mb-6 opacity-90">Détail de QUI fait QUOI et À QUELLE FRÉQUENCE dans les programmes de télésurveillance</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg">
+                            <h3 class="text-2xl font-bold text-purple-700 mb-4">👩‍⚕️ INFIRMIER(ÈRE) / Spécialiste IC</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">📊 Surveillance Quotidienne</h4>
+                                    <p class="text-sm text-gray-600">Fréquence: Quotidienne (jours ouvrables)</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Révision poids, TA, FC, SpO2</li>
+                                        <li>• Identification des alertes</li>
+                                        <li>• Documentation des tendances</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">📞 Contact Patient & Éducation</h4>
+                                    <p class="text-sm text-gray-600">Fréquence: Hebdomadaire à mensuelle</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Appels de coaching santé</li>
+                                        <li>• Évaluation des symptômes</li>
+                                        <li>• Conseils d'observance</li>
+                                        <li>• Éducation à l'auto-soin</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">💊 Gestion Médicamenteuse</h4>
+                                    <p class="text-sm text-gray-600">Fréquence: Toutes les 2-4 semaines</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Ajustement diurétiques (protocole)</li>
+                                        <li>• Titration GDMT sous supervision</li>
+                                        <li>• Évaluation des effets secondaires</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg">
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-4">👨‍⚕️ MÉDECIN / Cardiologue / MG</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">⚕️ Supervision Clinique</h4>
+                                    <p class="text-sm text-gray-600">Fréquence: Disponibilité 24h/24</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Supervision du centre télémédical</li>
+                                        <li>• Support d'urgence</li>
+                                        <li>• Consultation cas complexes</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">💊 Décisions Médicamenteuses</h4>
+                                    <p class="text-sm text-gray-600">Fréquence: Selon besoin</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Prescription GDMT</li>
+                                        <li>• Initiation IEC/ARA/ARNI</li>
+                                        <li>• Approbation titration BB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="it">
+                    <h2 class="text-3xl font-bold mb-6">👩‍⚕️ Ruoli & Responsabilità: Infermiere vs. Medico</h2>
+                    <p class="text-lg mb-6 opacity-90">Dettaglio di CHI fa COSA e CON QUALE FREQUENZA nei programmi di telemonitoraggio</p>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg">
+                            <h3 class="text-2xl font-bold text-purple-700 mb-4">👩‍⚕️ INFERMIERE / Specialista SC</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">📊 Monitoraggio Giornaliero</h4>
+                                    <p class="text-sm text-gray-600">Frequenza: Giornaliera (giorni feriali)</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Revisione peso, PA, FC, SpO2</li>
+                                        <li>• Identificazione trigger di allarme</li>
+                                        <li>• Documentazione trend</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">📞 Contatto Paziente & Educazione</h4>
+                                    <p class="text-sm text-gray-600">Frequenza: Settimanale a mensile</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Chiamate di coaching sanitario</li>
+                                        <li>• Valutazione sintomi</li>
+                                        <li>• Consulenza sull'aderenza</li>
+                                        <li>• Educazione all'autocura</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-purple-500 pl-4">
+                                    <h4 class="font-bold text-lg">💊 Gestione Farmacologica</h4>
+                                    <p class="text-sm text-gray-600">Frequenza: Ogni 2-4 settimane</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Aggiustamento diuretici (protocollo)</li>
+                                        <li>• Titolazione GDMT sotto supervisione</li>
+                                        <li>• Valutazione effetti collaterali</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="bg-white text-gray-800 rounded-xl p-6 shadow-lg">
+                            <h3 class="text-2xl font-bold text-indigo-700 mb-4">👨‍⚕️ MEDICO / Cardiologo / MMG</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">⚕️ Supervisione Clinica</h4>
+                                    <p class="text-sm text-gray-600">Frequenza: Disponibilità 24/7</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Supervisione centro telemedico</li>
+                                        <li>• Supporto emergenze</li>
+                                        <li>• Consultazione casi complessi</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="border-l-4 border-indigo-500 pl-4">
+                                    <h4 class="font-bold text-lg">💊 Decisioni Farmacologiche</h4>
+                                    <p class="text-sm text-gray-600">Frequenza: Secondo necessità</p>
+                                    <ul class="text-sm mt-2 space-y-1">
+                                        <li>• Prescrizione GDMT</li>
+                                        <li>• Iniziazione ACEi/ARB/ARNI</li>
+                                        <li>• Approvazione titolazione BB</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STUDY-SPECIFIC INTERVENTION TIMELINE -->
+        <section id="intervention-timeline" class="mb-16 page-break">
+            <div class="bg-white rounded-2xl shadow-xl p-8">
+                <div class="lang-content active" data-lang="en">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">⏱️ Intervention Timeline by Study</h2>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead class="bg-gradient-to-r from-blue-800 to-indigo-800 text-white">
+                                <tr>
+                                    <th class="p-4 text-left">Activity</th>
+                                    <th class="p-4 text-center">TIM-HF2</th>
+                                    <th class="p-4 text-center">BEAT-HF</th>
+                                    <th class="p-4 text-center">HerzMobil</th>
+                                    <th class="p-4 text-center">Nurse-Led GDMT</th>
+                                    <th class="p-4 text-center">TELESAT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Vital Signs Transmission</td>
+                                    <td class="p-4 text-center bg-green-50">Daily</td>
+                                    <td class="p-4 text-center bg-green-50">Daily</td>
+                                    <td class="p-4 text-center bg-green-50">Daily</td>
+                                    <td class="p-4 text-center bg-green-50">Daily</td>
+                                    <td class="p-4 text-center bg-yellow-50">Weekly</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Nurse Data Review</td>
+                                    <td class="p-4 text-center">Daily (weekdays)</td>
+                                    <td class="p-4 text-center">Daily</td>
+                                    <td class="p-4 text-center">Daily</td>
+                                    <td class="p-4 text-center">Every 2-4 weeks</td>
+                                    <td class="p-4 text-center">Weekly (alerts)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Nurse Phone Calls</td>
+                                    <td class="p-4 text-center">Monthly structured</td>
+                                    <td class="p-4 text-center">9 calls over 6 months</td>
+                                    <td class="p-4 text-center">As needed</td>
+                                    <td class="p-4 text-center">Every 2-4 weeks</td>
+                                    <td class="p-4 text-center">Alert-triggered</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Physician Review</td>
+                                    <td class="p-4 text-center">24/7 + quarterly</td>
+                                    <td class="p-4 text-center">Not integrated</td>
+                                    <td class="p-4 text-center">Every 3 months</td>
+                                    <td class="p-4 text-center">As needed</td>
+                                    <td class="p-4 text-center">Alert-based</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">In-Person Visits</td>
+                                    <td class="p-4 text-center">3, 6, 9 months</td>
+                                    <td class="p-4 text-center">None (RPM only)</td>
+                                    <td class="p-4 text-center">Weeks 1, 4, 12</td>
+                                    <td class="p-4 text-center">Every 3-6 months</td>
+                                    <td class="p-4 text-center">As needed</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Medication Titration</td>
+                                    <td class="p-4 text-center">Nurse + physician</td>
+                                    <td class="p-4 text-center">None (education only)</td>
+                                    <td class="p-4 text-center">Nurse (per MD order)</td>
+                                    <td class="p-4 text-center">Nurse + pharmacist</td>
+                                    <td class="p-4 text-center">Physician-led</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Lab Tests</td>
+                                    <td class="p-4 text-center">Baseline + as needed</td>
+                                    <td class="p-4 text-center">Not specified</td>
+                                    <td class="p-4 text-center">Per protocol</td>
+                                    <td class="p-4 text-center">1-2 weeks post-titration</td>
+                                    <td class="p-4 text-center">As needed</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Patient Education</td>
+                                    <td class="p-4 text-center">Monthly + materials</td>
+                                    <td class="p-4 text-center">Every call</td>
+                                    <td class="p-4 text-center">At enrollment + visits</td>
+                                    <td class="p-4 text-center">Each contact</td>
+                                    <td class="p-4 text-center">Daily challenge quizzes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="de">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">⏱️ Interventions-Zeitplan nach Studie</h2>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-sm">
+                            <thead class="bg-gradient-to-r from-blue-800 to-indigo-800 text-white">
+                                <tr>
+                                    <th class="p-4 text-left">Aktivität</th>
+                                    <th class="p-4 text-center">TIM-HF2</th>
+                                    <th class="p-4 text-center">BEAT-HF</th>
+                                    <th class="p-4 text-center">HerzMobil</th>
+                                    <th class="p-4 text-center">Pflegekraft-GDMT</th>
+                                    <th class="p-4 text-center">TELESAT</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Vitalzeichen-Übertragung</td>
+                                    <td class="p-4 text-center bg-green-50">Täglich</td>
+                                    <td class="p-4 text-center bg-green-50">Täglich</td>
+                                    <td class="p-4 text-center bg-green-50">Täglich</td>
+                                    <td class="p-4 text-center bg-green-50">Täglich</td>
+                                    <td class="p-4 text-center bg-yellow-50">Wöchentlich</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Pflegekraft-Datenüberprüfung</td>
+                                    <td class="p-4 text-center">Täglich (werktags)</td>
+                                    <td class="p-4 text-center">Täglich</td>
+                                    <td class="p-4 text-center">Täglich</td>
+                                    <td class="p-4 text-center">Alle 2-4 Wochen</td>
+                                    <td class="p-4 text-center">Wöchentlich (Alarme)</td>
+                                </tr>
+                                <tr class="border-b">
+                                    <td class="p-4 font-bold">Pflegekraft-Telefonanrufe</td>
+                                    <td class="p-4 text-center">Monatlich strukturiert</td>
+                                    <td class="p-4 text-center">9 Anrufe über 6 Monate</td>
+                                    <td class="p-4 text-center">Bei Bedarf</td>
+                                    <td class="p-4 text-center">Alle 2-4 Wochen</td>
+                                    <td class="p-4 text-center">Alarmgesteuert</td>
+                                </tr>
+                                <tr class="border-b bg-gray-50">
+                                    <td class="p-4 font-bold">Arztüberprüfung</td>
+                                    <td class="p-4 text-center">24/7 + vierteljährlich</td>
+                                    <td class="p-4 text-center">Nicht integriert</td>
+                                    <td class="p-4 text-center">Alle 3 Monate</td>
+                                    <td class="p-4 text-center">Bei Bedarf</td>
+                                    <td class="p-4 text-center">Alarmbasiert</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="fr">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">⏱️ Chronologie des Interventions par Étude</h2>
+                    <p class="text-gray-600 mb-4">Comparaison détaillée des fréquences d'intervention entre les études</p>
+                </div>
+                
+                <div class="lang-content" data-lang="it">
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">⏱️ Cronologia degli Interventi per Studio</h2>
+                    <p class="text-gray-600 mb-4">Confronto dettagliato delle frequenze di intervento tra gli studi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEY SUCCESS FACTORS -->
+        <section class="mb-16">
+            <div class="bg-gradient-to-r from-amber-500 to-orange-500 text-white rounded-2xl p-8 shadow-xl">
+                <div class="lang-content active" data-lang="en">
+                    <h2 class="text-3xl font-bold mb-6">🔑 Key Success Factors from Positive Studies</h2>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">📋 Patient Selection</h3>
+                            <ul class="space-y-2">
+                                <li>✅ Recent HF hospitalization (within 12 months)</li>
+                                <li>✅ Exclude severe depression (PHQ-9 >9)</li>
+                                <li>✅ NYHA II-III (not end-stage)</li>
+                                <li>✅ Stable on GDMT before enrollment</li>
+                                <li>✅ Adequate digital literacy or phone alternative</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">⚙️ Intervention Design</h3>
+                            <ul class="space-y-2">
+                                <li>✅ 24/7 physician-led monitoring center</li>
+                                <li>✅ Daily vital sign transmission</li>
+                                <li>✅ Structured response algorithms</li>
+                                <li>✅ Direct treatment authority (not just recommendations)</li>
+                                <li>✅ Integration with local healthcare providers</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">👥 Team Structure</h3>
+                            <ul class="space-y-2">
+                                <li>✅ HF specialist nurses for daily monitoring</li>
+                                <li>✅ Physicians for clinical decisions</li>
+                                <li>✅ Monthly structured patient contact</li>
+                                <li>✅ Collaborative care with GP/cardiologist</li>
+                                <li>✅ Regular patient education</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="de">
+                    <h2 class="text-3xl font-bold mb-6">🔑 Schlüsselfaktoren für den Erfolg aus positiven Studien</h2>
+                    
+                    <div class="grid md:grid-cols-3 gap-6">
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">📋 Patientenauswahl</h3>
+                            <ul class="space-y-2">
+                                <li>✅ Kürzliche HI-Hospitalisierung (innerhalb 12 Monate)</li>
+                                <li>✅ Ausschluss schwerer Depression (PHQ-9 >9)</li>
+                                <li>✅ NYHA II-III (nicht Endstadium)</li>
+                                <li>✅ Stabil unter GDMT vor Einschluss</li>
+                                <li>✅ Ausreichende digitale Kompetenz oder Telefonalternative</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">⚙️ Interventionsdesign</h3>
+                            <ul class="space-y-2">
+                                <li>✅ 24/7 ärztlich geleitetes Überwachungszentrum</li>
+                                <li>✅ Tägliche Vitalzeichenübertragung</li>
+                                <li>✅ Strukturierte Reaktionsalgorithmen</li>
+                                <li>✅ Direkte Behandlungsautorität</li>
+                                <li>✅ Integration mit lokalen Gesundheitsversorgern</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-white/20 backdrop-blur rounded-xl p-6">
+                            <h3 class="text-xl font-bold mb-4">👥 Teamstruktur</h3>
+                            <ul class="space-y-2">
+                                <li>✅ HI-Fachpflegekräfte für tägliche Überwachung</li>
+                                <li>✅ Ärzte für klinische Entscheidungen</li>
+                                <li>✅ Monatlicher strukturierter Patientenkontakt</li>
+                                <li>✅ Kollaborative Versorgung mit Hausarzt/Kardiologe</li>
+                                <li>✅ Regelmäßige Patientenschulung</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lang-content" data-lang="fr">
+                    <h2 class="text-3xl font-bold mb-6">🔑 Facteurs Clés de Succès des Études Positives</h2>
+                    <p class="mb-4">Analyse des éléments qui ont permis aux études TIM-HF2, TELESAT et HerzMobil d'obtenir des résultats positifs</p>
+                </div>
+                
+                <div class="lang-content" data-lang="it">
+                    <h2 class="text-3xl font-bold mb-6">🔑 Fattori Chiave di Successo dagli Studi Positivi</h2>
+                    <p class="mb-4">Analisi degli elementi che hanno permesso agli studi TIM-HF2, TELESAT e HerzMobil di ottenere risultati positivi</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Section -->
+        <section class="mb-16 no-print">
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8 text-center">
+                <div class="lang-content active" data-lang="en">
+                    <h2 class="text-3xl font-bold mb-4">📥 Download PDF Version</h2>
+                    <p class="mb-6">Get a printable PDF version of this comprehensive clinical protocol guide</p>
+                    <button onclick="window.print()" class="btn btn-lg bg-white text-indigo-600 hover:bg-gray-100">
+                        🖨️ Print / Save as PDF
+                    </button>
+                </div>
+                <div class="lang-content" data-lang="de">
+                    <h2 class="text-3xl font-bold mb-4">📥 PDF-Version Herunterladen</h2>
+                    <p class="mb-6">Erhalten Sie eine druckbare PDF-Version dieses umfassenden klinischen Protokollleitfadens</p>
+                    <button onclick="window.print()" class="btn btn-lg bg-white text-indigo-600 hover:bg-gray-100">
+                        🖨️ Drucken / Als PDF Speichern
+                    </button>
+                </div>
+                <div class="lang-content" data-lang="fr">
+                    <h2 class="text-3xl font-bold mb-4">📥 Télécharger la Version PDF</h2>
+                    <p class="mb-6">Obtenez une version PDF imprimable de ce guide complet des protocoles cliniques</p>
+                    <button onclick="window.print()" class="btn btn-lg bg-white text-indigo-600 hover:bg-gray-100">
+                        🖨️ Imprimer / Enregistrer en PDF
+                    </button>
+                </div>
+                <div class="lang-content" data-lang="it">
+                    <h2 class="text-3xl font-bold mb-4">📥 Scarica Versione PDF</h2>
+                    <p class="mb-6">Ottieni una versione PDF stampabile di questa guida completa ai protocolli clinici</p>
+                    <button onclick="window.print()" class="btn btn-lg bg-white text-indigo-600 hover:bg-gray-100">
+                        🖨️ Stampa / Salva come PDF
+                    </button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <div class="lang-content active" data-lang="en">
+                <p class="mb-2">© 2025 Heart Failure Telemonitoring Clinical Protocol Guide</p>
+                <p class="text-sm text-gray-400">This document is for educational purposes. Please consult original publications for complete study details.</p>
+                <p class="text-sm text-gray-400 mt-2">Sources: NEJM, Lancet, European Heart Journal, JAMA Internal Medicine, ESC Heart Failure</p>
+            </div>
+            <div class="lang-content" data-lang="de">
+                <p class="mb-2">© 2025 Klinischer Protokollleitfaden für Herzinsuffizienz-Telemonitoring</p>
+                <p class="text-sm text-gray-400">Dieses Dokument dient Bildungszwecken. Bitte konsultieren Sie Originalpublikationen für vollständige Studiendetails.</p>
+            </div>
+            <div class="lang-content" data-lang="fr">
+                <p class="mb-2">© 2025 Guide des Protocoles Cliniques de Télésurveillance de l'IC</p>
+                <p class="text-sm text-gray-400">Ce document est à des fins éducatives. Veuillez consulter les publications originales pour les détails complets.</p>
+            </div>
+            <div class="lang-content" data-lang="it">
+                <p class="mb-2">© 2025 Guida ai Protocolli Clinici di Telemonitoraggio SC</p>
+                <p class="text-sm text-gray-400">Questo documento è a scopo educativo. Consultare le pubblicazioni originali per i dettagli completi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+                el.classList.add('active');
+            });
+            document.querySelectorAll('[id^="btn-"]').forEach(btn => {
+                btn.classList.remove('btn-active', 'bg-white/40');
+                btn.classList.add('bg-white/20');
+            });
+            const activeBtn = document.getElementById(`btn-${lang}`);
+            if (activeBtn) {
+                activeBtn.classList.add('btn-active', 'bg-white/40');
+                activeBtn.classList.remove('bg-white/20');
+            }
+            localStorage.setItem('preferred-language', lang);
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedLang = localStorage.getItem('preferred-language') || 'en';
+            setLanguage(savedLang);
+        });
+    </script>
+</body>
+</html>
