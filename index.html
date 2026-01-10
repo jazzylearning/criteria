@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heart Failure Telemonitoring Studies - Complete Clinical Protocol Guide with References</title>
+    <title>Heart Failure Telemonitoring Studies - Comprehensive Clinical Protocol Guide</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -12,943 +12,728 @@
         @media print {
             .no-print { display: none !important; }
             .page-break { page-break-before: always; }
-            body { font-size: 10pt; }
-            .study-section { break-inside: avoid; }
+            body { font-size: 9pt; line-height: 1.3; }
         }
-        .reference { font-size: 0.85em; color: #1d4ed8; cursor: pointer; }
-        .reference:hover { text-decoration: underline; }
-        .criteria-table th { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; }
-        .criteria-table td { border: 1px solid #e5e7eb; padding: 10px; vertical-align: top; }
+        .ref { color: #2563eb; font-size: 0.85em; font-weight: 600; }
+        .study-card { border-left: 5px solid; transition: all 0.3s; }
+        .study-card:hover { transform: translateX(5px); }
+        .study-1 { border-color: #dc2626; }
+        .study-2 { border-color: #2563eb; }
+        .study-3 { border-color: #059669; }
+        .study-4 { border-color: #7c3aed; }
+        .study-5 { border-color: #ea580c; }
+        .study-6 { border-color: #0891b2; }
+        .study-7 { border-color: #be185d; }
+        .study-8 { border-color: #4f46e5; }
+        .positive { background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); border: 2px solid #22c55e; }
+        .negative { background: linear-gradient(135deg, #fef2f2 0%, #fecaca 100%); border: 2px solid #ef4444; }
         .role-nurse { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); }
-        .role-physician { background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%); }
-        .study-header-1 { background: linear-gradient(135deg, #dc2626 0%, #f97316 100%); }
-        .study-header-2 { background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%); }
-        .study-header-3 { background: linear-gradient(135deg, #059669 0%, #10b981 100%); }
-        .study-header-4 { background: linear-gradient(135deg, #7c3aed 0%, #a855f7 100%); }
-        .study-header-5 { background: linear-gradient(135deg, #ea580c 0%, #f59e0b 100%); }
-        .study-header-6 { background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%); }
-        .study-header-7 { background: linear-gradient(135deg, #be185d 0%, #ec4899 100%); }
-        .alert-box { border-left: 4px solid #f59e0b; background: #fffbeb; }
-        .positive-result { background: #dcfce7; border-left: 4px solid #22c55e; }
-        .negative-result { background: #fef2f2; border-left: 4px solid #ef4444; }
+        .role-doctor { background: linear-gradient(135deg, #0369a1 0%, #0ea5e9 100%); }
+        .blood-test { background: linear-gradient(135deg, #dc2626 0%, #f97316 100%); }
+        .stability { background: linear-gradient(135deg, #059669 0%, #10b981 100%); }
+        .criteria-header { background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%); }
+        table.detailed { font-size: 0.875rem; }
+        table.detailed th { padding: 12px 8px; text-align: left; }
+        table.detailed td { padding: 10px 8px; border-bottom: 1px solid #e5e7eb; vertical-align: top; }
     </style>
 </head>
 <body class="bg-gray-50">
     <!-- Language Selector -->
     <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white py-3 no-print sticky top-0 z-50 shadow-lg">
         <div class="container mx-auto px-4 flex justify-between items-center flex-wrap gap-2">
-            <span class="font-bold text-lg">🫀 HF Telemonitoring Studies - Complete Clinical Guide</span>
-            <div class="flex gap-2 flex-wrap">
-                <button onclick="setLanguage('en')" class="btn btn-sm bg-white/20 hover:bg-white/30 border-white/30" id="btn-en">🇬🇧 English</button>
-                <button onclick="setLanguage('de')" class="btn btn-sm bg-white/20 hover:bg-white/30 border-white/30" id="btn-de">🇩🇪 Deutsch</button>
-                <button onclick="setLanguage('fr')" class="btn btn-sm bg-white/20 hover:bg-white/30 border-white/30" id="btn-fr">🇫🇷 Français</button>
-                <button onclick="setLanguage('it')" class="btn btn-sm bg-white/20 hover:bg-white/30 border-white/30" id="btn-it">🇮🇹 Italiano</button>
+            <span class="font-bold">🫀 HF Telemonitoring Complete Clinical Guide</span>
+            <div class="flex gap-2">
+                <button onclick="setLanguage('en')" class="btn btn-sm bg-white/20 hover:bg-white/30" id="btn-en">🇬🇧 EN</button>
+                <button onclick="setLanguage('de')" class="btn btn-sm bg-white/20 hover:bg-white/30" id="btn-de">🇩🇪 DE</button>
+                <button onclick="setLanguage('fr')" class="btn btn-sm bg-white/20 hover:bg-white/30" id="btn-fr">🇫🇷 FR</button>
+                <button onclick="setLanguage('it')" class="btn btn-sm bg-white/20 hover:bg-white/30" id="btn-it">🇮🇹 IT</button>
             </div>
         </div>
     </div>
 
     <!-- Header -->
-    <header class="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white py-12">
+    <header class="bg-gradient-to-r from-blue-900 via-indigo-900 to-purple-900 text-white py-10">
         <div class="container mx-auto px-4 text-center">
             <div class="lang-content active" data-lang="en">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Heart Failure Telemonitoring Studies</h1>
-                <h2 class="text-xl md:text-2xl opacity-90 mb-4">Complete Clinical Protocol Guide with Original References</h2>
-                <p class="text-lg opacity-80 max-w-4xl mx-auto">Study-by-study analysis of inclusion criteria, stability definitions, blood tests, patient stratification, and detailed intervention protocols (nurse vs. physician roles, frequencies, activities)</p>
+                <h1 class="text-3xl md:text-4xl font-bold mb-3">Heart Failure Telemonitoring Studies</h1>
+                <h2 class="text-xl opacity-90 mb-4">Complete Clinical Protocol Guide with Original References</h2>
+                <p class="opacity-80 max-w-3xl mx-auto text-sm">Study-by-study analysis: Inclusion criteria • Blood tests • Stability definitions • Nurse vs. Physician roles • Intervention frequencies</p>
             </div>
             <div class="lang-content" data-lang="de">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Herzinsuffizienz-Telemonitoring-Studien</h1>
-                <h2 class="text-xl md:text-2xl opacity-90 mb-4">Vollständiger Klinischer Protokollleitfaden mit Originalreferenzen</h2>
-                <p class="text-lg opacity-80 max-w-4xl mx-auto">Studie-für-Studie-Analyse von Einschlusskriterien, Stabilitätsdefinitionen, Blutuntersuchungen, Patientenstratifizierung und detaillierten Interventionsprotokollen</p>
+                <h1 class="text-3xl md:text-4xl font-bold mb-3">Herzinsuffizienz-Telemonitoring-Studien</h1>
+                <h2 class="text-xl opacity-90 mb-4">Vollständiger Klinischer Protokollleitfaden mit Originalreferenzen</h2>
             </div>
             <div class="lang-content" data-lang="fr">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Études de Télésurveillance de l'Insuffisance Cardiaque</h1>
-                <h2 class="text-xl md:text-2xl opacity-90 mb-4">Guide Complet des Protocoles Cliniques avec Références Originales</h2>
-                <p class="text-lg opacity-80 max-w-4xl mx-auto">Analyse étude par étude des critères d'inclusion, définitions de stabilité, analyses sanguines, stratification des patients et protocoles d'intervention détaillés</p>
+                <h1 class="text-3xl md:text-4xl font-bold mb-3">Études de Télésurveillance de l'Insuffisance Cardiaque</h1>
+                <h2 class="text-xl opacity-90 mb-4">Guide Complet avec Références Originales</h2>
             </div>
             <div class="lang-content" data-lang="it">
-                <h1 class="text-4xl md:text-5xl font-bold mb-4">Studi di Telemonitoraggio dello Scompenso Cardiaco</h1>
-                <h2 class="text-xl md:text-2xl opacity-90 mb-4">Guida Completa ai Protocolli Clinici con Riferimenti Originali</h2>
-                <p class="text-lg opacity-80 max-w-4xl mx-auto">Analisi studio per studio dei criteri di inclusione, definizioni di stabilità, esami del sangue, stratificazione dei pazienti e protocolli di intervento dettagliati</p>
+                <h1 class="text-3xl md:text-4xl font-bold mb-3">Studi di Telemonitoraggio Scompenso Cardiaco</h1>
+                <h2 class="text-xl opacity-90 mb-4">Guida Completa con Riferimenti Originali</h2>
             </div>
         </div>
     </header>
 
-    <!-- Table of Contents -->
-    <nav class="bg-white shadow-lg py-4 no-print">
-        <div class="container mx-auto px-4">
-            <div class="flex overflow-x-auto gap-2 pb-2 text-sm">
-                <a href="#tele-hf" class="btn btn-xs btn-outline whitespace-nowrap">1. Tele-HF (NEJM)</a>
-                <a href="#tim-hf" class="btn btn-xs btn-outline whitespace-nowrap">2. TIM-HF</a>
-                <a href="#tim-hf2" class="btn btn-xs btn-outline whitespace-nowrap">3. TIM-HF2</a>
-                <a href="#beat-hf" class="btn btn-xs btn-outline whitespace-nowrap">4. BEAT-HF</a>
-                <a href="#telesat" class="btn btn-xs btn-outline whitespace-nowrap">5. TELESAT-HF</a>
-                <a href="#herzmobil" class="btn btn-xs btn-outline whitespace-nowrap">6. HerzMobil Tirol</a>
-                <a href="#nurse-gdmt" class="btn btn-xs btn-outline whitespace-nowrap">7. Nurse-Led GDMT</a>
-                <a href="#references" class="btn btn-xs btn-outline btn-primary whitespace-nowrap">📚 References</a>
-            </div>
-        </div>
-    </nav>
+    <main class="container mx-auto px-4 py-6">
 
-    <main class="container mx-auto px-4 py-8">
+        <!-- =========================================== -->
+        <!-- STUDY 1: TELE-HF -->
+        <!-- =========================================== -->
+        <section class="mb-10 study-card study-1 bg-white rounded-xl shadow-lg p-6">
+            <div class="lang-content active" data-lang="en">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-red-700">1. Tele-HF Study</h2>
+                        <p class="text-sm text-gray-600">Chaudhry SI et al. <strong>N Engl J Med</strong>. 2010;363(24):2301-2309</p>
+                    </div>
+                    <span class="badge badge-error badge-lg">NEGATIVE</span>
+                </div>
 
-        <!-- ============================================ -->
-        <!-- STUDY 1: TELE-HF (NEJM 2010) -->
-        <!-- ============================================ -->
-        <section id="tele-hf" class="mb-12 study-section">
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div class="study-header-1 text-white p-6">
-                    <div class="lang-content active" data-lang="en">
-                        <h2 class="text-3xl font-bold">1. Tele-HF Study (NEJM 2010)</h2>
-                        <p class="mt-2 opacity-90">Telemonitoring to Improve Heart Failure Outcomes</p>
-                        <p class="text-sm mt-1 opacity-75">Chaudhry SI et al. N Engl J Med. 2010;363(24):2301-2309 <span class="reference">[Ref 1]</span></p>
+                <!-- Inclusion Criteria -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-red-600 mb-3">📋 INCLUSION CRITERIA</h3>
+                    <table class="detailed w-full">
+                        <thead class="criteria-header text-white">
+                            <tr><th>Criterion</th><th>Specification</th><th class="w-20">Ref</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="font-semibold">Primary Requirement</td><td>Hospitalized for HF within <strong>previous 30 days</strong></td><td class="ref">[1]</td></tr>
+                            <tr class="bg-gray-50"><td class="font-semibold">LVEF</td><td><strong>Any LVEF accepted</strong> (70.6% had LVEF <40%)</td><td class="ref">[1] T1</td></tr>
+                            <tr><td class="font-semibold">NYHA Class</td><td>Any class (subgroups: I-II vs III-IV analyzed)</td><td class="ref">[1] F3</td></tr>
+                            <tr class="bg-gray-50"><td class="font-semibold">Age</td><td>No limit; Median 61 years (IQR 52-73)</td><td class="ref">[1] T1</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Stability & Blood Tests -->
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="stability text-white p-4 rounded-xl">
+                        <h4 class="font-bold mb-2">✅ STABILITY DEFINITION (Exclusions)</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Long-term nursing home residence</li>
+                            <li>• Expected survival <6 months (non-HF)</li>
+                            <li>• Severe cognitive impairment</li>
+                            <li>• Inability to stand on scale</li>
+                            <li>• Planned hospitalization for procedure</li>
+                        </ul>
+                        <p class="text-xs mt-2 opacity-80">[1] Methods section</p>
                     </div>
-                    <div class="lang-content" data-lang="de">
-                        <h2 class="text-3xl font-bold">1. Tele-HF Studie (NEJM 2010)</h2>
-                        <p class="mt-2 opacity-90">Telemonitoring zur Verbesserung der Herzinsuffizienz-Ergebnisse</p>
-                        <p class="text-sm mt-1 opacity-75">Chaudhry SI et al. N Engl J Med. 2010;363(24):2301-2309 <span class="reference">[Ref 1]</span></p>
-                    </div>
-                    <div class="lang-content" data-lang="fr">
-                        <h2 class="text-3xl font-bold">1. Étude Tele-HF (NEJM 2010)</h2>
-                        <p class="mt-2 opacity-90">Télésurveillance pour Améliorer les Résultats de l'IC</p>
-                        <p class="text-sm mt-1 opacity-75">Chaudhry SI et al. N Engl J Med. 2010;363(24):2301-2309 <span class="reference">[Ref 1]</span></p>
-                    </div>
-                    <div class="lang-content" data-lang="it">
-                        <h2 class="text-3xl font-bold">1. Studio Tele-HF (NEJM 2010)</h2>
-                        <p class="mt-2 opacity-90">Telemonitoraggio per Migliorare gli Esiti dello SC</p>
-                        <p class="text-sm mt-1 opacity-75">Chaudhry SI et al. N Engl J Med. 2010;363(24):2301-2309 <span class="reference">[Ref 1]</span></p>
+                    <div class="blood-test text-white p-4 rounded-xl">
+                        <h4 class="font-bold mb-2">🩸 BLOOD TESTS</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• <strong>No specific BNP/NT-proBNP requirement</strong></li>
+                            <li>• 54% had <strong>chronic kidney disease</strong> (eGFR <60)</li>
+                            <li>• 44% had diabetes mellitus</li>
+                            <li>• Labs monitored as standard clinical care</li>
+                        </ul>
+                        <p class="text-xs mt-2 opacity-80">[1] Table 1 baseline characteristics</p>
                     </div>
                 </div>
 
-                <div class="p-6">
-                    <!-- INCLUSION CRITERIA -->
-                    <div class="mb-8">
-                        <div class="lang-content active" data-lang="en">
-                            <h3 class="text-2xl font-bold text-red-700 mb-4">📋 Inclusion & Stability Criteria</h3>
-                            <div class="overflow-x-auto">
-                                <table class="criteria-table w-full text-sm">
-                                    <thead>
-                                        <tr>
-                                            <th class="p-3 text-left w-1/4">Criterion</th>
-                                            <th class="p-3 text-left">Details</th>
-                                            <th class="p-3 text-left w-1/6">Reference</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="font-bold">Recent HF Hospitalization</td>
-                                            <td>Hospitalized for heart failure within <strong>previous 30 days</strong></td>
-                                            <td class="text-blue-600">[1] Methods</td>
-                                        </tr>
-                                        <tr class="bg-gray-50">
-                                            <td class="font-bold">LVEF Requirement</td>
-                                            <td><strong>Any LVEF accepted</strong> (70.6% had LVEF <40%, depressed EF)</td>
-                                            <td class="text-blue-600">[1] Table 1</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="font-bold">NYHA Class</td>
-                                            <td>Any class; subgroup analysis: I-II vs III-IV</td>
-                                            <td class="text-blue-600">[1] Figure 3</td>
-                                        </tr>
-                                        <tr class="bg-gray-50">
-                                            <td class="font-bold">Age</td>
-                                            <td>No specific requirement; Median 61 years (IQR 52-73)</td>
-                                            <td class="text-blue-600">[1] Table 1</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                <!-- Intervention Protocol -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-red-600 mb-3">⚙️ INTERVENTION PROTOCOL: WHO does WHAT, HOW OFTEN</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="role-nurse text-white p-4 rounded-xl">
+                            <h4 class="font-bold text-lg mb-3">👩‍⚕️ SITE COORDINATOR (Nurse)</h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="bg-white/20 p-3 rounded">
+                                    <p class="font-bold">📊 Data Review</p>
+                                    <p>Review telemonitoring data <strong>every weekday</strong> (M-F, except holidays)</p>
+                                </div>
+                                <div class="bg-white/20 p-3 rounded">
+                                    <p class="font-bold">📞 Patient Contact</p>
+                                    <p>Call when variances detected; Call after <strong>2 days</strong> non-use</p>
+                                </div>
+                                <div class="bg-white/20 p-3 rounded">
+                                    <p class="font-bold">📚 Education</p>
+                                    <p>Demonstrate system at enrollment; Provide HFSA materials</p>
+                                </div>
                             </div>
+                        </div>
+                        <div class="role-doctor text-white p-4 rounded-xl">
+                            <h4 class="font-bold text-lg mb-3">👨‍⚕️ CLINICIAN (Physician)</h4>
+                            <div class="space-y-3 text-sm">
+                                <div class="bg-white/20 p-3 rounded">
+                                    <p class="font-bold">⚕️ Clinical Decisions</p>
+                                    <p><strong>Primary responsibility</strong> for patient care; Receive variance alerts</p>
+                                </div>
+                                <div class="bg-white/20 p-3 rounded">
+                                    <p class="font-bold">💊 Medication</p>
+                                    <p>Adjustments based on symptoms; Diuretic changes for weight gain</p>
+                                </div>
+                                <div class="bg-white/20 p-3 rounded">
+                                    <p class="font-bold">📋 Documentation</p>
+                                    <p>Required to document management of each variance</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                            <h4 class="text-lg font-bold mt-6 mb-2 text-gray-700">❌ Exclusion Criteria (Stability Definition):</h4>
-                            <div class="grid md:grid-cols-2 gap-4">
-                                <ul class="list-disc ml-6 space-y-1 text-sm">
-                                    <li>Residence in <strong>long-term nursing home</strong></li>
-                                    <li><strong>Low expected survival <6 months</strong> (non-HF conditions)</li>
-                                    <li>Inability to stand on a scale</li>
+                <!-- Frequency Table -->
+                <div class="overflow-x-auto mb-4">
+                    <h4 class="font-bold mb-2">⏱️ Intervention Frequency Summary</h4>
+                    <table class="detailed w-full text-sm">
+                        <thead class="bg-red-700 text-white">
+                            <tr><th>Activity</th><th>Who</th><th>Frequency</th><th>Ref</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Patient IVR calls</td><td>Patient</td><td><strong>Daily</strong></td><td class="ref">[1]</td></tr>
+                            <tr class="bg-gray-50"><td>Coordinator data review</td><td>Nurse/Coordinator</td><td><strong>Every weekday</strong></td><td class="ref">[1]</td></tr>
+                            <tr><td>Depression screening (PHQ-2)</td><td>Automated IVR</td><td><strong>Every 30 days</strong></td><td class="ref">[1]</td></tr>
+                            <tr class="bg-gray-50"><td>Reminder for non-use</td><td>System→Staff</td><td>After <strong>2 consecutive days</strong></td><td class="ref">[1]</td></tr>
+                            <tr><td>Yale QC review</td><td>Research staff</td><td><strong>Every 2-3 weeks</strong></td><td class="ref">[1]</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Result -->
+                <div class="negative p-4 rounded-xl">
+                    <p class="font-bold text-red-700">📊 RESULT: No benefit</p>
+                    <p class="text-sm">Primary endpoint (180-day readmission/death): 52.3% vs 51.5% (p=0.75). Adherence: 90%→55% over 26 weeks. <span class="ref">[1]</span></p>
+                </div>
+            </div>
+
+            <div class="lang-content" data-lang="de">
+                <h2 class="text-2xl font-bold text-red-700 mb-4">1. Tele-HF Studie (NEJM 2010)</h2>
+                <p class="mb-4">Hospitalisierung wegen HI innerhalb der letzten <strong>30 Tage</strong>. Jede LVEF akzeptiert. Studienkoordinatoren überprüfen Daten <strong>jeden Werktag</strong>. PHQ-2 Depression-Screening alle 30 Tage. <span class="ref">[Ref 1]</span></p>
+                <div class="negative p-4 rounded-xl">
+                    <p class="font-bold text-red-700">📊 ERGEBNIS: Negativ - Kein Nutzen nachgewiesen</p>
+                </div>
+            </div>
+
+            <div class="lang-content" data-lang="fr">
+                <h2 class="text-2xl font-bold text-red-700 mb-4">1. Étude Tele-HF (NEJM 2010)</h2>
+                <p class="mb-4">Hospitalisation IC dans les <strong>30 derniers jours</strong>. Toute FEVG acceptée. Coordinateurs vérifient données <strong>chaque jour ouvrable</strong>. Dépistage dépression PHQ-2 tous les 30 jours. <span class="ref">[Réf 1]</span></p>
+            </div>
+
+            <div class="lang-content" data-lang="it">
+                <h2 class="text-2xl font-bold text-red-700 mb-4">1. Studio Tele-HF (NEJM 2010)</h2>
+                <p class="mb-4">Ospedalizzazione SC negli ultimi <strong>30 giorni</strong>. Qualsiasi FEVS accettata. Coordinatori verificano dati <strong>ogni giorno lavorativo</strong>. Screening depressione PHQ-2 ogni 30 giorni. <span class="ref">[Rif 1]</span></p>
+            </div>
+        </section>
+
+        <!-- =========================================== -->
+        <!-- STUDY 2: TIM-HF -->
+        <!-- =========================================== -->
+        <section class="mb-10 study-card study-2 bg-white rounded-xl shadow-lg p-6 page-break">
+            <div class="lang-content active" data-lang="en">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-blue-700">2. TIM-HF Study</h2>
+                        <p class="text-sm text-gray-600">Koehler F et al. <strong>Circulation</strong>. 2011;124:1719-1726</p>
+                    </div>
+                    <span class="badge badge-error badge-lg">NEGATIVE</span>
+                </div>
+
+                <!-- Inclusion Criteria -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-blue-600 mb-3">📋 INCLUSION CRITERIA</h3>
+                    <table class="detailed w-full">
+                        <thead class="criteria-header text-white">
+                            <tr><th>Criterion</th><th>Specification</th><th class="w-20">Ref</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="font-semibold">LVEF</td><td><strong>≤35%</strong> (Mean: 27%)</td><td class="ref">[2] T1</td></tr>
+                            <tr class="bg-gray-50"><td class="font-semibold">NYHA Class</td><td><strong>II or III</strong> (50% each)</td><td class="ref">[2] T1</td></tr>
+                            <tr><td class="font-semibold">Prior Decompensation</td><td>
+                                LVEF >25%: ≥1 hospitalization OR IV diuretics (>40mg furosemide/d) in past 24 months<br>
+                                LVEF ≤25%: No hospitalization requirement
+                            </td><td class="ref">[2]</td></tr>
+                            <tr class="bg-gray-50"><td class="font-semibold">Medication</td><td><strong>Optimally treated</strong> per guidelines</td><td class="ref">[2]</td></tr>
+                            <tr><td class="font-semibold">Clinical Status</td><td><strong>Stable, ambulatory</strong> patients</td><td class="ref">[2]</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Blood Tests -->
+                <div class="blood-test text-white p-4 rounded-xl mb-6">
+                    <h4 class="font-bold mb-2">🩸 BLOOD TESTS AT BASELINE</h4>
+                    <div class="grid md:grid-cols-4 gap-3 text-sm">
+                        <div class="bg-white/20 p-2 rounded">
+                            <p class="font-bold">NT-proBNP</p>
+                            <p>2478 ± 3266 pg/mL</p>
+                        </div>
+                        <div class="bg-white/20 p-2 rounded">
+                            <p class="font-bold">Creatinine</p>
+                            <p>115 ± 37 μmol/L</p>
+                        </div>
+                        <div class="bg-white/20 p-2 rounded">
+                            <p class="font-bold">eGFR</p>
+                            <p>62.5 ± 21.9 mL/min</p>
+                        </div>
+                        <div class="bg-white/20 p-2 rounded">
+                            <p class="font-bold">Potassium</p>
+                            <p>4.63 ± 0.62 mmol/L</p>
+                        </div>
+                    </div>
+                    <p class="text-xs mt-2 opacity-80">[2] Table 1 - Laboratory measurements</p>
+                </div>
+
+                <!-- Intervention -->
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="role-doctor text-white p-4 rounded-xl">
+                        <h4 class="font-bold mb-3">👨‍⚕️ TELEMEDICAL CENTER PHYSICIAN</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>⏰ <strong>24/7 availability</strong> for entire study</li>
+                            <li>📊 Daily transmitted data review</li>
+                            <li>⚕️ <strong>Verify measurements, give consultation, institute treatment</strong></li>
+                            <li>📞 Contact local physician with recommendations</li>
+                        </ul>
+                        <p class="text-xs mt-2 opacity-80">[2] "physician-led medical support 24h/day, 7d/week"</p>
+                    </div>
+                    <div class="role-nurse text-white p-4 rounded-xl">
+                        <h4 class="font-bold mb-3">👩‍⚕️ LOCAL PHYSICIAN (Network)</h4>
+                        <ul class="text-sm space-y-2">
+                            <li>🏥 <strong>Retains general responsibility</strong> for patient care</li>
+                            <li>📞 Contacted by TMC <strong>at least every 3 months</strong></li>
+                            <li>💊 Implements long-term medication changes</li>
+                            <li>📋 GDMT optimization per guidelines</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Equipment -->
+                <div class="bg-gray-100 p-4 rounded-xl mb-4">
+                    <h4 class="font-bold mb-2">📱 Monitoring Equipment</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-lg">3-lead ECG</span>
+                        <span class="badge badge-lg">Blood Pressure</span>
+                        <span class="badge badge-lg">Weight Scale (50g precision)</span>
+                        <span class="badge badge-lg">PDA + Bluetooth</span>
+                    </div>
+                    <p class="text-sm mt-2">2 Telemedical Centers: Berlin & Stuttgart. Daily encrypted transmission. <span class="ref">[2]</span></p>
+                </div>
+
+                <!-- Frequency -->
+                <table class="detailed w-full text-sm mb-4">
+                    <thead class="bg-blue-700 text-white">
+                        <tr><th>Activity</th><th>Who</th><th>Frequency</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Patient self-assessment</td><td>Patient</td><td><strong>Daily</strong></td></tr>
+                        <tr class="bg-gray-50"><td>TMC physician review</td><td>TMC Physician</td><td><strong>24/7</strong></td></tr>
+                        <tr><td>Contact local physician</td><td>TMC→Local MD</td><td><strong>≥Every 3 months</strong></td></tr>
+                        <tr class="bg-gray-50"><td>Follow-up visits</td><td>Local physician</td><td>3, 6, 9, 12, 18, 24 months</td></tr>
+                        <tr><td>PHQ-9 depression screening</td><td>Patient</td><td>Baseline, 12, 24 months</td></tr>
+                    </tbody>
+                </table>
+
+                <div class="negative p-4 rounded-xl">
+                    <p class="font-bold text-red-700">📊 RESULT: No benefit</p>
+                    <p class="text-sm">All-cause mortality: HR 0.97 (95% CI 0.67-1.41, p=0.87). n=710, median 26 months follow-up. <span class="ref">[2]</span></p>
+                </div>
+            </div>
+
+            <div class="lang-content" data-lang="de">
+                <h2 class="text-2xl font-bold text-blue-700 mb-4">2. TIM-HF Studie (Circulation 2011)</h2>
+                <p>LVEF ≤35%, NYHA II-III, stabil, optimal behandelt. 24/7 ärztliche Überwachung im Telemedizinischen Zentrum. Kontakt mit lokalem Arzt mindestens alle 3 Monate. <span class="ref">[Ref 2]</span></p>
+            </div>
+
+            <div class="lang-content" data-lang="fr">
+                <h2 class="text-2xl font-bold text-blue-700 mb-4">2. Étude TIM-HF (Circulation 2011)</h2>
+                <p>FEVG ≤35%, NYHA II-III, stable, traitement optimal. Surveillance médicale 24h/24 au centre télémédical. Contact médecin local au moins tous les 3 mois. <span class="ref">[Réf 2]</span></p>
+            </div>
+
+            <div class="lang-content" data-lang="it">
+                <h2 class="text-2xl font-bold text-blue-700 mb-4">2. Studio TIM-HF (Circulation 2011)</h2>
+                <p>FEVS ≤35%, NYHA II-III, stabile, trattamento ottimale. Sorveglianza medica 24/7 nel centro telemedico. Contatto medico locale almeno ogni 3 mesi. <span class="ref">[Rif 2]</span></p>
+            </div>
+        </section>
+
+        <!-- =========================================== -->
+        <!-- STUDY 3: TIM-HF2 -->
+        <!-- =========================================== -->
+        <section class="mb-10 study-card study-3 bg-white rounded-xl shadow-lg p-6 page-break">
+            <div class="lang-content active" data-lang="en">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-green-700">3. TIM-HF2 Study ⭐ POSITIVE</h2>
+                        <p class="text-sm text-gray-600">Koehler F et al. <strong>Lancet</strong>. 2018;392:1047-1057</p>
+                    </div>
+                    <span class="badge badge-success badge-lg">POSITIVE</span>
+                </div>
+
+                <div class="bg-green-100 border-l-4 border-green-500 p-4 mb-6">
+                    <p class="font-bold text-green-700">🔑 KEY LEARNING: Refined patient selection based on TIM-HF post-hoc analysis</p>
+                    <p class="text-sm">Added: Recent hospitalization requirement + Depression exclusion (PHQ-9 >9)</p>
+                </div>
+
+                <!-- Inclusion -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-green-600 mb-3">📋 REFINED INCLUSION CRITERIA</h3>
+                    <table class="detailed w-full">
+                        <thead class="criteria-header text-white">
+                            <tr><th>Criterion</th><th>TIM-HF2</th><th>vs TIM-HF</th><th>Ref</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="font-semibold">LVEF</td><td><strong>≤45%</strong></td><td class="text-gray-500">Was ≤35%</td><td class="ref">[3]</td></tr>
+                            <tr class="bg-gray-50"><td class="font-semibold">NYHA Class</td><td><strong>II or III</strong></td><td>Same</td><td class="ref">[3]</td></tr>
+                            <tr class="bg-yellow-50"><td class="font-semibold">🆕 Recent HF Hospitalization</td><td><strong>REQUIRED within 12 months</strong></td><td class="text-green-600 font-bold">NEW!</td><td class="ref">[3]</td></tr>
+                            <tr class="bg-yellow-50"><td class="font-semibold">🆕 Depression Screening</td><td><strong>PHQ-9 score ≤9</strong> (excludes moderate-severe)</td><td class="text-green-600 font-bold">NEW!</td><td class="ref">[3]</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Equipment Enhancement -->
+                <div class="bg-gray-100 p-4 rounded-xl mb-4">
+                    <h4 class="font-bold mb-2">📱 Enhanced Equipment (vs TIM-HF)</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-lg">3-lead ECG</span>
+                        <span class="badge badge-lg">Blood Pressure</span>
+                        <span class="badge badge-lg">Weight Scale</span>
+                        <span class="badge badge-lg badge-warning">🆕 SpO2 (Oxygen Saturation)</span>
+                        <span class="badge badge-lg">Tablet PC</span>
+                    </div>
+                </div>
+
+                <!-- Intervention -->
+                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                    <div class="role-doctor text-white p-4 rounded-xl">
+                        <h4 class="font-bold mb-3">👨‍⚕️ TMC PHYSICIAN (Enhanced)</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>⏰ <strong>24/7 physician-led monitoring</strong></li>
+                            <li>⚕️ <strong>Direct treatment authority</strong> (not just recommendations)</li>
+                            <li>📋 Structured remote patient management</li>
+                            <li>📞 Monthly structured patient contact</li>
+                        </ul>
+                    </div>
+                    <div class="role-nurse text-white p-4 rounded-xl">
+                        <h4 class="font-bold mb-3">👩‍⚕️ LOCAL CARE TEAM</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>🤝 Collaborative care with primary physician</li>
+                            <li>💊 Individualized therapy optimization</li>
+                            <li>📚 Education and self-care support</li>
+                            <li>🏥 In-person visits: 3, 6, 9 months</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="positive p-4 rounded-xl">
+                    <p class="font-bold text-green-700">📊 RESULT: POSITIVE ✓</p>
+                    <p class="text-sm">Days lost to unplanned CV hospitalization/death: <strong>4.88% vs 6.64% (p=0.046)</strong>. All-cause mortality: <strong>7.86% vs 11.34% (HR 0.70, p=0.028)</strong>. n=1,571. <span class="ref">[3]</span></p>
+                </div>
+            </div>
+
+            <div class="lang-content" data-lang="de">
+                <h2 class="text-2xl font-bold text-green-700 mb-4">3. TIM-HF2 Studie ⭐ POSITIV</h2>
+                <p>LVEF ≤45%, NYHA II-III, HI-Hospitalisierung innerhalb 12 Monate, PHQ-9 ≤9. 24/7 ärztliche Überwachung mit direkter Behandlungsautorität. <span class="ref">[Ref 3]</span></p>
+                <div class="positive p-4 rounded-xl mt-4">
+                    <p class="font-bold text-green-700">📊 ERGEBNIS: POSITIV ✓ - Mortalitätsreduktion: 7,86% vs 11,34%</p>
+                </div>
+            </div>
+
+            <div class="lang-content" data-lang="fr">
+                <h2 class="text-2xl font-bold text-green-700 mb-4">3. Étude TIM-HF2 ⭐ POSITIVE</h2>
+                <p>FEVG ≤45%, NYHA II-III, hospitalisation IC dans les 12 mois, PHQ-9 ≤9. Surveillance médicale 24h/24 avec autorité de traitement direct. <span class="ref">[Réf 3]</span></p>
+            </div>
+
+            <div class="lang-content" data-lang="it">
+                <h2 class="text-2xl font-bold text-green-700 mb-4">3. Studio TIM-HF2 ⭐ POSITIVO</h2>
+                <p>FEVS ≤45%, NYHA II-III, ospedalizzazione SC entro 12 mesi, PHQ-9 ≤9. Sorveglianza medica 24/7 con autorità di trattamento diretto. <span class="ref">[Rif 3]</span></p>
+            </div>
+        </section>
+
+        <!-- =========================================== -->
+        <!-- STUDY 4: TELESAT-HF -->
+        <!-- =========================================== -->
+        <section class="mb-10 study-card study-4 bg-white rounded-xl shadow-lg p-6 page-break">
+            <div class="lang-content active" data-lang="en">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-purple-700">4. TELESAT-HF Study ⭐ POSITIVE</h2>
+                        <p class="text-sm text-gray-600">Girerd N et al. <strong>Eur J Heart Fail</strong>. 2025;27:1658-1669</p>
+                    </div>
+                    <span class="badge badge-success badge-lg">POSITIVE</span>
+                </div>
+
+                <!-- Inclusion -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-purple-600 mb-3">📋 INCLUSION CRITERIA</h3>
+                    <table class="detailed w-full">
+                        <thead class="criteria-header text-white">
+                            <tr><th>Criterion</th><th>Specification</th><th>Ref</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="font-semibold">Primary Requirement</td><td><strong>Hospitalized for HF</strong> (ICD-10: I50 primary or secondary)</td><td class="ref">[4]</td></tr>
+                            <tr class="bg-gray-50"><td class="font-semibold">Country</td><td>France (>300 healthcare centers)</td><td class="ref">[4]</td></tr>
+                            <tr><td class="font-semibold">Digital Literacy</td><td>Both digital literate AND illiterate patients included (phone alternative)</td><td class="ref">[4]</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Unique Features -->
+                <div class="bg-purple-100 border-l-4 border-purple-500 p-4 mb-6">
+                    <p class="font-bold text-purple-700">🔑 UNIQUE: Algorithm-Adjusted Monitoring Frequency + Digital Divide Solution</p>
+                    <p class="text-sm">Satelia® Cardio algorithm tailors monitoring frequency to patient risk profile. Phone monitoring for digitally illiterate patients.</p>
+                </div>
+
+                <!-- Intervention -->
+                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                    <div class="role-nurse text-white p-4 rounded-xl">
+                        <h4 class="font-bold mb-3">👩‍⚕️ SATELIA NURSES (18→28 over study)</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>📞 Onboarding call within <strong>48 hours</strong> of inclusion</li>
+                            <li>📊 Phone-based data collection for non-digital patients</li>
+                            <li>📚 <strong>3 educational sessions/semester</strong> (phone)</li>
+                            <li>🔔 Follow-up calls for non-responsive patients</li>
+                        </ul>
+                    </div>
+                    <div class="role-doctor text-white p-4 rounded-xl">
+                        <h4 class="font-bold mb-3">👨‍⚕️ CARDIOLOGIST/PHYSICIAN</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>📋 Receives automated alerts from algorithm</li>
+                            <li>⚕️ Clinical decision-making</li>
+                            <li>💊 Medication adjustments</li>
+                            <li>🏥 Prescribes RMP enrollment</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Patient Education -->
+                <div class="bg-gray-100 p-4 rounded-xl mb-4">
+                    <h4 class="font-bold mb-2">📚 Structured Patient Education</h4>
+                    <p class="text-sm mb-2">Patients self-select expertise level: A (guided), B (eager to learn), C (expert)</p>
+                    <div class="grid md:grid-cols-3 gap-2 text-sm">
+                        <div class="bg-white p-2 rounded">
+                            <p class="font-bold">Daily Challenge</p>
+                            <p>2 true/false questions + tip</p>
+                        </div>
+                        <div class="bg-white p-2 rounded">
+                            <p class="font-bold">5 Key Areas</p>
+                            <p>Deterioration signs, diet, medications, exercise, weight</p>
+                        </div>
+                        <div class="bg-white p-2 rounded">
+                            <p class="font-bold">Cycle Duration</p>
+                            <p>9 weeks, 40 different questions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="positive p-4 rounded-xl">
+                    <p class="font-bold text-green-700">📊 RESULT: POSITIVE ✓ (Real-world, n=18,882)</p>
+                    <p class="text-sm">All-cause mortality: <strong>HR 0.64 (95% CI 0.59-0.70, p<0.0001)</strong>. Less time in hospital (-2.1%). Fewer emergency visits (RR 0.83). <span class="ref">[4]</span></p>
+                </div>
+            </div>
+
+            <div class="lang-content" data-lang="de">
+                <h2 class="text-2xl font-bold text-purple-700 mb-4">4. TELESAT-HF Studie ⭐ POSITIV</h2>
+                <p>Frankreich, >300 Zentren. Satelia® Cardio mit algorithmusangepasster Überwachungsfrequenz. Telefon-Monitoring für digital nicht versierte Patienten. 3 Schulungssitzungen/Semester. <span class="ref">[Ref 4]</span></p>
+            </div>
+
+            <div class="lang-content" data-lang="fr">
+                <h2 class="text-2xl font-bold text-purple-700 mb-4">4. Étude TELESAT-HF ⭐ POSITIVE</h2>
+                <p>France, >300 centres. Satelia® Cardio avec fréquence de surveillance adaptée par algorithme. Suivi téléphonique pour patients non numériques. 3 sessions éducatives/semestre. <span class="ref">[Réf 4]</span></p>
+            </div>
+
+            <div class="lang-content" data-lang="it">
+                <h2 class="text-2xl font-bold text-purple-700 mb-4">4. Studio TELESAT-HF ⭐ POSITIVO</h2>
+                <p>Francia, >300 centri. Satelia® Cardio con frequenza di monitoraggio adattata dall'algoritmo. Monitoraggio telefonico per pazienti non digitali. 3 sessioni educative/semestre. <span class="ref">[Rif 4]</span></p>
+            </div>
+        </section>
+
+        <!-- =========================================== -->
+        <!-- STUDY 5: Nurse-Led GDMT -->
+        <!-- =========================================== -->
+        <section class="mb-10 study-card study-7 bg-white rounded-xl shadow-lg p-6 page-break">
+            <div class="lang-content active" data-lang="en">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-pink-700">5. Nurse-Led GDMT Optimization</h2>
+                        <p class="text-sm text-gray-600">Zheng J et al. <strong>J Card Fail</strong>. 2023;29(7):1000-1013 (Systematic Review)</p>
+                    </div>
+                    <span class="badge badge-success badge-lg">POSITIVE</span>
+                </div>
+
+                <!-- Summary -->
+                <div class="bg-pink-100 border-l-4 border-pink-500 p-4 mb-6">
+                    <p class="font-bold text-pink-700">📊 Meta-analysis: 33 studies, 17 RCTs, 5,268 patients</p>
+                    <p class="text-sm">82% of RCTs evaluated <strong>nurse interventions</strong>; remainder pharmacist-led</p>
+                </div>
+
+                <!-- Key Findings -->
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-pink-600 mb-3">📋 TYPICAL INCLUSION ACROSS STUDIES</h3>
+                    <table class="detailed w-full">
+                        <thead class="criteria-header text-white">
+                            <tr><th>Criterion</th><th>Range</th><th>Ref</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="font-semibold">EF Restriction</td><td>71% specified <strong>EF ≤40-50%</strong></td><td class="ref">[5]</td></tr>
+                            <tr class="bg-gray-50"><td class="font-semibold">NYHA Class</td><td>24% selected NYHA II-IV</td><td class="ref">[5]</td></tr>
+                            <tr><td class="font-semibold">Follow-up</td><td>Median <strong>6 months</strong> (range 1-24)</td><td class="ref">[5]</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Nurse Role -->
+                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                    <div class="role-nurse text-white p-4 rounded-xl">
+                        <h4 class="font-bold mb-3">👩‍⚕️ NURSE ROLE (82% of RCTs)</h4>
+                        <ul class="text-sm space-y-2">
+                            <li><strong>💊 GDMT Titration:</strong>
+                                <ul class="ml-4 mt-1">
+                                    <li>• ACEi/ARB initiation: RR 2.09 (p<0.05)</li>
+                                    <li>• Beta-blocker initiation: RR 1.91 (p<0.05)</li>
+                                    <li>• Uptitration to target doses</li>
                                 </ul>
-                                <ul class="list-disc ml-6 space-y-1 text-sm">
-                                    <li><strong>Severe cognitive impairment</strong></li>
-                                    <li>Planned hospitalization for a procedure</li>
-                                    <li>Inability to participate in study protocol</li>
+                            </li>
+                            <li><strong>📋 Practice Scope:</strong> 41% had independent prescribing authority</li>
+                            <li><strong>🏥 Setting:</strong> 76% outpatient, 24% transitional</li>
+                        </ul>
+                    </div>
+                    <div class="role-doctor text-white p-4 rounded-xl">
+                        <h4 class="font-bold mb-3">👨‍⚕️ PHYSICIAN ROLE</h4>
+                        <ul class="text-sm space-y-2">
+                            <li><strong>⚕️ Supervision:</strong> 59% non-independent nurse practice</li>
+                            <li><strong>📋 Usual Care Providers:</strong>
+                                <ul class="ml-4 mt-1">
+                                    <li>• General practice: 61%</li>
+                                    <li>• Cardiologist: 48%</li>
                                 </ul>
-                            </div>
-
-                            <div class="alert-box p-4 mt-4 rounded-lg">
-                                <p class="font-bold">⚠️ Blood Tests:</p>
-                                <p class="text-sm">54% had <strong>chronic kidney disease</strong> (eGFR <60 mL/min). No specific BNP/NT-proBNP requirement for enrollment. Labs monitored as part of clinical care. <span class="reference">[1] Table 1</span></p>
-                            </div>
-                        </div>
-
-                        <div class="lang-content" data-lang="de">
-                            <h3 class="text-2xl font-bold text-red-700 mb-4">📋 Einschluss- & Stabilitätskriterien</h3>
-                            <div class="overflow-x-auto">
-                                <table class="criteria-table w-full text-sm">
-                                    <thead>
-                                        <tr>
-                                            <th class="p-3 text-left w-1/4">Kriterium</th>
-                                            <th class="p-3 text-left">Details</th>
-                                            <th class="p-3 text-left w-1/6">Referenz</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="font-bold">Kürzliche HI-Hospitalisierung</td>
-                                            <td>Wegen Herzinsuffizienz hospitalisiert innerhalb der <strong>letzten 30 Tage</strong></td>
-                                            <td class="text-blue-600">[1] Methoden</td>
-                                        </tr>
-                                        <tr class="bg-gray-50">
-                                            <td class="font-bold">LVEF-Anforderung</td>
-                                            <td><strong>Jede LVEF akzeptiert</strong> (70,6% hatten LVEF <40%)</td>
-                                            <td class="text-blue-600">[1] Tabelle 1</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="font-bold">NYHA-Klasse</td>
-                                            <td>Jede Klasse; Subgruppenanalyse: I-II vs III-IV</td>
-                                            <td class="text-blue-600">[1] Abbildung 3</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <h4 class="text-lg font-bold mt-6 mb-2 text-gray-700">❌ Ausschlusskriterien (Stabilitätsdefinition):</h4>
-                            <ul class="list-disc ml-6 space-y-1 text-sm">
-                                <li>Aufenthalt im <strong>Langzeitpflegeheim</strong></li>
-                                <li><strong>Geringe Überlebenserwartung <6 Monate</strong> (Nicht-HI-Erkrankungen)</li>
-                                <li>Unfähigkeit, auf einer Waage zu stehen</li>
-                                <li><strong>Schwere kognitive Beeinträchtigung</strong></li>
-                            </ul>
-                        </div>
-
-                        <div class="lang-content" data-lang="fr">
-                            <h3 class="text-2xl font-bold text-red-700 mb-4">📋 Critères d'Inclusion & Stabilité</h3>
-                            <p class="mb-4">Hospitalisation IC dans les <strong>30 derniers jours</strong>. Toute FEVG acceptée (70,6% avaient FEVG <40%). <span class="reference">[Réf 1]</span></p>
-                        </div>
-
-                        <div class="lang-content" data-lang="it">
-                            <h3 class="text-2xl font-bold text-red-700 mb-4">📋 Criteri di Inclusione & Stabilità</h3>
-                            <p class="mb-4">Ospedalizzazione SC negli ultimi <strong>30 giorni</strong>. Qualsiasi FEVS accettata (70,6% aveva FEVS <40%). <span class="reference">[Rif 1]</span></p>
-                        </div>
-                    </div>
-
-                    <!-- INTERVENTION PROTOCOL -->
-                    <div class="mb-8">
-                        <div class="lang-content active" data-lang="en">
-                            <h3 class="text-2xl font-bold text-red-700 mb-4">⚙️ Detailed Intervention Protocol</h3>
-                            
-                            <div class="grid md:grid-cols-2 gap-6 mb-6">
-                                <!-- WHO: Site Coordinator (Nurse) -->
-                                <div class="role-nurse text-white p-5 rounded-xl">
-                                    <h4 class="text-xl font-bold mb-3">👩‍⚕️ SITE COORDINATOR (Nurse Role)</h4>
-                                    <div class="bg-white/20 p-4 rounded-lg mb-3">
-                                        <h5 class="font-bold">📊 Daily Monitoring Tasks</h5>
-                                        <ul class="text-sm space-y-1 mt-2">
-                                            <li>• Review telemonitoring data <strong>every weekday</strong> (except holidays)</li>
-                                            <li>• Access data via secure Internet site</li>
-                                            <li>• Identify and document <strong>"variances"</strong> (alert triggers)</li>
-                                        </ul>
-                                        <p class="text-xs mt-2 opacity-80">[1] Methods: "reviewed every weekday by site coordinators"</p>
-                                    </div>
-                                    <div class="bg-white/20 p-4 rounded-lg mb-3">
-                                        <h5 class="font-bold">📞 Patient Contact</h5>
-                                        <ul class="text-sm space-y-1 mt-2">
-                                            <li>• Contact patients when variances detected</li>
-                                            <li>• Call non-compliant patients after 2 days of non-use</li>
-                                            <li>• Provide device troubleshooting support</li>
-                                        </ul>
-                                    </div>
-                                    <div class="bg-white/20 p-4 rounded-lg">
-                                        <h5 class="font-bold">📚 Education Tasks</h5>
-                                        <ul class="text-sm space-y-1 mt-2">
-                                            <li>• Demonstrate telemonitoring system at enrollment</li>
-                                            <li>• Provide HFSA educational materials</li>
-                                            <li>• Distribute scales and telephones as needed</li>
-                                        </ul>
-                                    </div>
-                                </div>
-
-                                <!-- WHO: Clinician/Physician -->
-                                <div class="role-physician text-white p-5 rounded-xl">
-                                    <h4 class="text-xl font-bold mb-3">👨‍⚕️ CLINICIAN (Physician Role)</h4>
-                                    <div class="bg-white/20 p-4 rounded-lg mb-3">
-                                        <h5 class="font-bold">⚕️ Clinical Management</h5>
-                                        <ul class="text-sm space-y-1 mt-2">
-                                            <li>• <strong>Primary responsibility</strong> for patient care</li>
-                                            <li>• Receive variance alerts from coordinators</li>
-                                            <li>• Make clinical decisions on variances</li>
-                                            <li>• Implement treatment changes</li>
-                                        </ul>
-                                    </div>
-                                    <div class="bg-white/20 p-4 rounded-lg mb-3">
-                                        <h5 class="font-bold">💊 Medication Decisions</h5>
-                                        <ul class="text-sm space-y-1 mt-2">
-                                            <li>• Medication adjustments based on symptoms</li>
-                                            <li>• Diuretic dose changes for weight gain</li>
-                                            <li>• GDMT optimization per guidelines</li>
-                                        </ul>
-                                        <p class="text-xs mt-2 opacity-80">[1] "treat patients in accordance with national guidelines"</p>
-                                    </div>
-                                    <div class="bg-white/20 p-4 rounded-lg">
-                                        <h5 class="font-bold">📋 Response to Variances</h5>
-                                        <ul class="text-sm space-y-1 mt-2">
-                                            <li>• Required to document management of each variance</li>
-                                            <li>• Education about dietary indiscretions</li>
-                                            <li>• Referrals for office visits when indicated</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- WHAT: Data Collected -->
-                            <div class="bg-gray-100 p-5 rounded-xl mb-6">
-                                <h4 class="text-lg font-bold mb-3">📱 Monitoring System: Tel-Assurance (Pharos Innovations)</h4>
-                                <div class="grid md:grid-cols-3 gap-4">
-                                    <div class="bg-white p-4 rounded-lg">
-                                        <h5 class="font-bold text-red-700">Daily Data Collection</h5>
-                                        <ul class="text-sm mt-2 space-y-1">
-                                            <li>✓ <strong>Weight</strong> (daily measurement)</li>
-                                            <li>✓ <strong>Symptoms</strong> (via IVR questions)</li>
-                                            <li>✓ <strong>General health</strong> status</li>
-                                            <li>✓ HF-specific symptoms</li>
-                                        </ul>
-                                    </div>
-                                    <div class="bg-white p-4 rounded-lg">
-                                        <h5 class="font-bold text-red-700">Monthly Screening</h5>
-                                        <ul class="text-sm mt-2 space-y-1">
-                                            <li>✓ <strong>Depression screening</strong> (PHQ-2)</li>
-                                            <li>✓ Every 30 days via system</li>
-                                        </ul>
-                                        <p class="text-xs mt-2 text-gray-600">[1] "validated screening questions for symptoms of depression"</p>
-                                    </div>
-                                    <div class="bg-white p-4 rounded-lg">
-                                        <h5 class="font-bold text-red-700">Variance Triggers</h5>
-                                        <ul class="text-sm mt-2 space-y-1">
-                                            <li>⚠️ Weight gain >specified threshold</li>
-                                            <li>⚠️ Worsening symptoms</li>
-                                            <li>⚠️ Predetermined alert responses</li>
-                                        </ul>
-                                        <p class="text-xs mt-2 text-gray-600">Median 21 variances/patient (IQR 5-54)</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- HOW OFTEN: Frequency Table -->
-                            <div class="overflow-x-auto mb-6">
-                                <h4 class="text-lg font-bold mb-3">⏱️ Intervention Frequency</h4>
-                                <table class="w-full text-sm border-collapse">
-                                    <thead class="bg-red-700 text-white">
-                                        <tr>
-                                            <th class="p-3 text-left">Activity</th>
-                                            <th class="p-3 text-left">Who</th>
-                                            <th class="p-3 text-left">Frequency</th>
-                                            <th class="p-3 text-left">Reference</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr class="border-b">
-                                            <td class="p-3">Patient calls to IVR system</td>
-                                            <td class="p-3">Patient</td>
-                                            <td class="p-3"><strong>Daily</strong> (toll-free)</td>
-                                            <td class="p-3 text-blue-600">[1] Methods</td>
-                                        </tr>
-                                        <tr class="border-b bg-gray-50">
-                                            <td class="p-3">Data download to website</td>
-                                            <td class="p-3">Automated</td>
-                                            <td class="p-3"><strong>Daily</strong></td>
-                                            <td class="p-3 text-blue-600">[1] Methods</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="p-3">Data review by coordinator</td>
-                                            <td class="p-3">Site Coordinator</td>
-                                            <td class="p-3"><strong>Every weekday</strong> (M-F, except holidays)</td>
-                                            <td class="p-3 text-blue-600">[1] Methods</td>
-                                        </tr>
-                                        <tr class="border-b bg-gray-50">
-                                            <td class="p-3">Reminder call for non-use</td>
-                                            <td class="p-3">System → Staff</td>
-                                            <td class="p-3">After <strong>2 consecutive days</strong> of non-use</td>
-                                            <td class="p-3 text-blue-600">[1] Methods</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="p-3">Depression screening (PHQ-2)</td>
-                                            <td class="p-3">Automated via IVR</td>
-                                            <td class="p-3"><strong>Every 30 days</strong></td>
-                                            <td class="p-3 text-blue-600">[1] Methods</td>
-                                        </tr>
-                                        <tr class="border-b bg-gray-50">
-                                            <td class="p-3">Patient contact for variances</td>
-                                            <td class="p-3">Site Staff</td>
-                                            <td class="p-3"><strong>Same day/next business day</strong></td>
-                                            <td class="p-3 text-blue-600">[1] Methods</td>
-                                        </tr>
-                                        <tr class="border-b">
-                                            <td class="p-3">Yale Coordinating Center QC</td>
-                                            <td class="p-3">Research Staff</td>
-                                            <td class="p-3"><strong>Every 2-3 weeks</strong></td>
-                                            <td class="p-3 text-blue-600">[1] Methods</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-
-                            <!-- RESULT -->
-                            <div class="negative-result p-5 rounded-xl">
-                                <h4 class="text-lg font-bold text-red-700 mb-2">📊 Study Result: NEGATIVE</h4>
-                                <ul class="text-sm space-y-1">
-                                    <li>• <strong>Primary endpoint:</strong> Readmission or death at 180 days: 52.3% vs 51.5% (p=0.75)</li>
-                                    <li>• Adherence: 90.2% week 1 → 55.1% week 26</li>
-                                    <li>• <strong>n=1,653</strong> patients (826 telemonitoring, 827 usual care)</li>
-                                </ul>
-                                <p class="text-xs mt-2 text-gray-600">[1] "telemonitoring did not improve outcomes"</p>
-                            </div>
-                        </div>
-
-                        <div class="lang-content" data-lang="de">
-                            <h3 class="text-2xl font-bold text-red-700 mb-4">⚙️ Detailliertes Interventionsprotokoll</h3>
-                            <p class="mb-4">Tel-Assurance System: Tägliche IVR-Anrufe, tägliche Gewichtsmessung, werktägliche Datenüberprüfung durch Studienkoordinatoren. <span class="reference">[Ref 1]</span></p>
-                            <div class="negative-result p-5 rounded-xl">
-                                <h4 class="text-lg font-bold text-red-700 mb-2">📊 Studienergebnis: NEGATIV</h4>
-                                <p>Primärer Endpunkt: Rehospitalisierung oder Tod nach 180 Tagen: 52,3% vs 51,5% (p=0,75)</p>
-                            </div>
-                        </div>
-
-                        <div class="lang-content" data-lang="fr">
-                            <h3 class="text-2xl font-bold text-red-700 mb-4">⚙️ Protocole d'Intervention Détaillé</h3>
-                            <p class="mb-4">Système Tel-Assurance: Appels IVR quotidiens, pesée quotidienne, révision des données chaque jour ouvrable. <span class="reference">[Réf 1]</span></p>
-                        </div>
-
-                        <div class="lang-content" data-lang="it">
-                            <h3 class="text-2xl font-bold text-red-700 mb-4">⚙️ Protocollo di Intervento Dettagliato</h3>
-                            <p class="mb-4">Sistema Tel-Assurance: Chiamate IVR giornaliere, pesatura giornaliera, revisione dati ogni giorno lavorativo. <span class="reference">[Rif 1]</span></p>
-                        </div>
+                            </li>
+                            <li><strong>💊 Approves titration</strong> in non-independent models</li>
+                        </ul>
                     </div>
                 </div>
+
+                <!-- Therapies -->
+                <div class="bg-gray-100 p-4 rounded-xl mb-4">
+                    <h4 class="font-bold mb-2">💊 GDMT Classes in Protocols</h4>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="badge badge-lg">ACEi/ARB (82%)</span>
+                        <span class="badge badge-lg">Beta-blocker (91%)</span>
+                        <span class="badge badge-lg">MRA (42%)</span>
+                        <span class="badge badge-lg">ARNI (18%)</span>
+                        <span class="badge badge-lg">SGLT2i (3%)</span>
+                    </div>
+                </div>
+
+                <div class="positive p-4 rounded-xl">
+                    <p class="font-bold text-green-700">📊 RESULT: Improved GDMT Utilization</p>
+                    <p class="text-sm">RASI initiation: <strong>RR 2.09</strong>. BB initiation: <strong>RR 1.91</strong>. Mortality trend: RR 0.82 (0.67-1.04). HF hospitalization trend: RR 0.80 (0.63-1.01). <span class="ref">[5]</span></p>
+                </div>
+            </div>
+
+            <div class="lang-content" data-lang="de">
+                <h2 class="text-2xl font-bold text-pink-700 mb-4">5. Pflegekraft-geführte GDMT-Optimierung</h2>
+                <p>Meta-Analyse: 33 Studien, 82% mit Pflegekraft-Interventionen. ACEi/ARB-Initiierung: RR 2,09. Betablocker-Initiierung: RR 1,91. <span class="ref">[Ref 5]</span></p>
+            </div>
+
+            <div class="lang-content" data-lang="fr">
+                <h2 class="text-2xl font-bold text-pink-700 mb-4">5. Optimisation GDMT Dirigée par Infirmiers</h2>
+                <p>Méta-analyse: 33 études, 82% interventions infirmières. Initiation IEC/ARA: RR 2,09. Initiation bêtabloquants: RR 1,91. <span class="ref">[Réf 5]</span></p>
+            </div>
+
+            <div class="lang-content" data-lang="it">
+                <h2 class="text-2xl font-bold text-pink-700 mb-4">5. Ottimizzazione GDMT Guidata da Infermieri</h2>
+                <p>Meta-analisi: 33 studi, 82% interventi infermieristici. Iniziazione ACEi/ARB: RR 2,09. Iniziazione beta-bloccanti: RR 1,91. <span class="ref">[Rif 5]</span></p>
             </div>
         </section>
 
-        <!-- ============================================ -->
-        <!-- STUDY 2: TIM-HF (Circulation 2011) -->
-        <!-- ============================================ -->
-        <section id="tim-hf" class="mb-12 study-section page-break">
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div class="study-header-2 text-white p-6">
-                    <div class="lang-content active" data-lang="en">
-                        <h2 class="text-3xl font-bold">2. TIM-HF Study (Circulation 2011)</h2>
-                        <p class="mt-2 opacity-90">Telemedical Interventional Monitoring in Heart Failure - Germany</p>
-                        <p class="text-sm mt-1 opacity-75">Koehler F et al. Circulation. 2011;124:1719-1726 <span class="reference">[Ref 2]</span></p>
+        <!-- =========================================== -->
+        <!-- STUDY 6: Netherlands Network -->
+        <!-- =========================================== -->
+        <section class="mb-10 study-card study-6 bg-white rounded-xl shadow-lg p-6">
+            <div class="lang-content active" data-lang="en">
+                <div class="flex items-center justify-between mb-4">
+                    <div>
+                        <h2 class="text-2xl font-bold text-cyan-700">6. Netherlands Telemonitoring Network</h2>
+                        <p class="text-sm text-gray-600"><strong>Eur Heart J Digital Health</strong>. 2025 (Network Design Protocol)</p>
                     </div>
-                    <div class="lang-content" data-lang="de">
-                        <h2 class="text-3xl font-bold">2. TIM-HF Studie (Circulation 2011)</h2>
-                        <p class="mt-2 opacity-90">Telemedizinische Interventionelle Überwachung bei Herzinsuffizienz - Deutschland</p>
-                        <p class="text-sm mt-1 opacity-75">Koehler F et al. Circulation. 2011;124:1719-1726 <span class="reference">[Ref 2]</span></p>
+                    <span class="badge badge-info badge-lg">DESIGN</span>
+                </div>
+
+                <div class="bg-cyan-100 border-l-4 border-cyan-500 p-4 mb-6">
+                    <p class="font-bold text-cyan-700">🌐 Nationwide Initiative: Structuring Telemonitoring in HF Care in The Netherlands</p>
+                    <p class="text-sm">Standardized protocol aligned with standard care procedures while ensuring patient safety and feasible workload</p>
+                </div>
+
+                <!-- Key Protocol Elements -->
+                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                    <div class="bg-white border-2 border-cyan-300 p-4 rounded-xl">
+                        <h4 class="font-bold text-cyan-700 mb-2">📋 Monitoring Team Structure</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Centralized vs distributed models evaluated</li>
+                            <li>• Standardized operating procedures</li>
+                            <li>• Integration with electronic health records</li>
+                        </ul>
                     </div>
-                    <div class="lang-content" data-lang="fr">
-                        <h2 class="text-3xl font-bold">2. Étude TIM-HF (Circulation 2011)</h2>
-                        <p class="mt-2 opacity-90">Surveillance Interventionnelle Télémédicale - Allemagne</p>
-                    </div>
-                    <div class="lang-content" data-lang="it">
-                        <h2 class="text-3xl font-bold">2. Studio TIM-HF (Circulation 2011)</h2>
-                        <p class="mt-2 opacity-90">Monitoraggio Interventistico Telemedico - Germania</p>
+                    <div class="bg-white border-2 border-cyan-300 p-4 rounded-xl">
+                        <h4 class="font-bold text-cyan-700 mb-2">⚙️ Technology Platform</h4>
+                        <ul class="text-sm space-y-1">
+                            <li>• Personal health record integration</li>
+                            <li>• Digital summary for clinicians</li>
+                            <li>• Remote gathered information processing</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="p-6">
-                    <div class="lang-content active" data-lang="en">
-                        <!-- INCLUSION CRITERIA -->
-                        <h3 class="text-2xl font-bold text-blue-700 mb-4">📋 Inclusion & Stability Criteria</h3>
-                        <div class="overflow-x-auto mb-6">
-                            <table class="criteria-table w-full text-sm">
-                                <thead>
-                                    <tr>
-                                        <th class="p-3 text-left">Criterion</th>
-                                        <th class="p-3 text-left">Details</th>
-                                        <th class="p-3 text-left">Reference</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="font-bold">Age</td>
-                                        <td>≥18 years (Mean: 66.9 years)</td>
-                                        <td class="text-blue-600">[2] Table 1</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="font-bold">NYHA Class</td>
-                                        <td><strong>II or III</strong> (50% each)</td>
-                                        <td class="text-blue-600">[2] Table 1</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="font-bold">LVEF</td>
-                                        <td><strong>≤35%</strong> (Mean: 27%)</td>
-                                        <td class="text-blue-600">[2] Table 1</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="font-bold">HF Decompensation History</td>
-                                        <td>
-                                            <strong>LVEF >25%:</strong> ≥1 hospitalization OR IV diuretics (>40mg furosemide/day) in past 24 months<br>
-                                            <strong>LVEF ≤25%:</strong> No hospitalization requirement
-                                        </td>
-                                        <td class="text-blue-600">[2] Methods</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="font-bold">Medical Therapy</td>
-                                        <td><strong>Optimally treated</strong> according to current guidelines</td>
-                                        <td class="text-blue-600">[2] Methods</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="font-bold">Clinical Status</td>
-                                        <td><strong>Stable, ambulatory</strong> patients</td>
-                                        <td class="text-blue-600">[2] Abstract</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
+                <p class="text-sm text-gray-600">Note: This represents a network design protocol rather than a completed outcome trial. <span class="ref">[6]</span></p>
+            </div>
 
-                        <div class="alert-box p-4 mb-6 rounded-lg">
-                            <p class="font-bold">🩸 Blood Tests at Baseline:</p>
-                            <div class="grid md:grid-cols-4 gap-4 mt-2 text-sm">
-                                <div><strong>NT-proBNP:</strong> 2478±3266 pg/mL</div>
-                                <div><strong>Creatinine:</strong> 115±37 μmol/L</div>
-                                <div><strong>eGFR:</strong> 62.5±21.9 mL/min</div>
-                                <div><strong>Potassium:</strong> 4.63±0.62 mmol/L</div>
-                            </div>
-                            <p class="text-xs mt-2 text-gray-600">[2] Table 1 - Laboratory measurements at baseline</p>
-                        </div>
+            <div class="lang-content" data-lang="de">
+                <h2 class="text-2xl font-bold text-cyan-700 mb-4">6. Niederländisches Telemonitoring-Netzwerk</h2>
+                <p>Landesweite Initiative zur Strukturierung des Telemonitorings in der HI-Versorgung. <span class="ref">[Ref 6]</span></p>
+            </div>
 
-                        <!-- INTERVENTION PROTOCOL -->
-                        <h3 class="text-2xl font-bold text-blue-700 mb-4">⚙️ Detailed Intervention Protocol</h3>
+            <div class="lang-content" data-lang="fr">
+                <h2 class="text-2xl font-bold text-cyan-700 mb-4">6. Réseau de Télésurveillance Pays-Bas</h2>
+                <p>Initiative nationale pour structurer la télésurveillance dans les soins IC. <span class="ref">[Réf 6]</span></p>
+            </div>
 
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <div class="role-physician text-white p-5 rounded-xl">
-                                <h4 class="text-xl font-bold mb-3">👨‍⚕️ TELEMEDICAL CENTER PHYSICIAN</h4>
-                                <div class="bg-white/20 p-4 rounded-lg mb-3">
-                                    <h5 class="font-bold">⏰ Availability</h5>
-                                    <p class="text-sm mt-1"><strong>24 hours/day, 7 days/week</strong> for entire study period</p>
-                                    <p class="text-xs opacity-80 mt-1">[2] "physician-led medical support 24 hours per day, 7 days per week"</p>
-                                </div>
-                                <div class="bg-white/20 p-4 rounded-lg mb-3">
-                                    <h5 class="font-bold">📊 Data Review</h5>
-                                    <ul class="text-sm space-y-1 mt-2">
-                                        <li>• Review daily transmitted data</li>
-                                        <li>• Analyze ECG, BP, weight trends</li>
-                                        <li>• Identify clinical deterioration</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white/20 p-4 rounded-lg">
-                                    <h5 class="font-bold">⚕️ Clinical Actions</h5>
-                                    <ul class="text-sm space-y-1 mt-2">
-                                        <li>• <strong>Verify measurements</strong></li>
-                                        <li>• <strong>Give consultation</strong></li>
-                                        <li>• <strong>Institute treatment</strong> directly</li>
-                                        <li>• Contact local physician</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="role-nurse text-white p-5 rounded-xl">
-                                <h4 class="text-xl font-bold mb-3">👩‍⚕️ LOCAL PHYSICIAN (Network)</h4>
-                                <div class="bg-white/20 p-4 rounded-lg mb-3">
-                                    <h5 class="font-bold">🏥 Primary Responsibility</h5>
-                                    <p class="text-sm mt-1"><strong>Retains general responsibility</strong> for patient care</p>
-                                    <p class="text-xs opacity-80 mt-1">[2] "general responsibility for the patient's care remained with the local physician"</p>
-                                </div>
-                                <div class="bg-white/20 p-4 rounded-lg mb-3">
-                                    <h5 class="font-bold">📞 Communication</h5>
-                                    <ul class="text-sm space-y-1 mt-2">
-                                        <li>• Contacted by TMC <strong>at least every 3 months</strong></li>
-                                        <li>• Receives treatment recommendations</li>
-                                        <li>• Implements long-term changes</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white/20 p-4 rounded-lg">
-                                    <h5 class="font-bold">💊 Medication Management</h5>
-                                    <ul class="text-sm space-y-1 mt-2">
-                                        <li>• GDMT optimization per guidelines</li>
-                                        <li>• Regular prescription management</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Equipment and Data -->
-                        <div class="bg-gray-100 p-5 rounded-xl mb-6">
-                            <h4 class="text-lg font-bold mb-3">📱 Monitoring Equipment & Data Flow</h4>
-                            <div class="grid md:grid-cols-4 gap-4">
-                                <div class="bg-white p-4 rounded-lg text-center">
-                                    <div class="text-3xl mb-2">📊</div>
-                                    <h5 class="font-bold text-blue-700">3-lead ECG</h5>
-                                    <p class="text-xs mt-1">Daily rhythm monitoring</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-lg text-center">
-                                    <div class="text-3xl mb-2">💓</div>
-                                    <h5 class="font-bold text-blue-700">Blood Pressure</h5>
-                                    <p class="text-xs mt-1">With heart rate</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-lg text-center">
-                                    <div class="text-3xl mb-2">⚖️</div>
-                                    <h5 class="font-bold text-blue-700">Weight Scale</h5>
-                                    <p class="text-xs mt-1">50g precision</p>
-                                </div>
-                                <div class="bg-white p-4 rounded-lg text-center">
-                                    <div class="text-3xl mb-2">📱</div>
-                                    <h5 class="font-bold text-blue-700">PDA + Bluetooth</h5>
-                                    <p class="text-xs mt-1">Encrypted cell phone transmission</p>
-                                </div>
-                            </div>
-                            <p class="text-sm mt-4"><strong>2 Telemedical Centers:</strong> Berlin and Stuttgart, using standard operating procedures. <span class="text-blue-600">[2] Figure 2</span></p>
-                        </div>
-
-                        <!-- Frequency Table -->
-                        <div class="overflow-x-auto mb-6">
-                            <h4 class="text-lg font-bold mb-3">⏱️ Intervention Frequency</h4>
-                            <table class="w-full text-sm border-collapse">
-                                <thead class="bg-blue-700 text-white">
-                                    <tr>
-                                        <th class="p-3 text-left">Activity</th>
-                                        <th class="p-3 text-left">Who</th>
-                                        <th class="p-3 text-left">Frequency</th>
-                                        <th class="p-3 text-left">Reference</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="border-b">
-                                        <td class="p-3">Patient self-assessment</td>
-                                        <td class="p-3">Patient</td>
-                                        <td class="p-3"><strong>Daily</strong></td>
-                                        <td class="p-3 text-blue-600">[2] Methods</td>
-                                    </tr>
-                                    <tr class="border-b bg-gray-50">
-                                        <td class="p-3">Data transmission</td>
-                                        <td class="p-3">Automated (PDA)</td>
-                                        <td class="p-3"><strong>Daily</strong> (encrypted)</td>
-                                        <td class="p-3 text-blue-600">[2] Methods</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="p-3">TMC physician review</td>
-                                        <td class="p-3">TMC Physician</td>
-                                        <td class="p-3"><strong>24/7</strong></td>
-                                        <td class="p-3 text-blue-600">[2] Methods</td>
-                                    </tr>
-                                    <tr class="border-b bg-gray-50">
-                                        <td class="p-3">Contact with local physician</td>
-                                        <td class="p-3">TMC → Local MD</td>
-                                        <td class="p-3"><strong>At least every 3 months</strong></td>
-                                        <td class="p-3 text-blue-600">[2] Methods</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="p-3">Equipment installation</td>
-                                        <td class="p-3">Technical staff</td>
-                                        <td class="p-3">Within <strong>5 working days</strong> of randomization</td>
-                                        <td class="p-3 text-blue-600">[2] Methods</td>
-                                    </tr>
-                                    <tr class="border-b bg-gray-50">
-                                        <td class="p-3">Follow-up visits</td>
-                                        <td class="p-3">Local physician</td>
-                                        <td class="p-3">3, 6, 9, 12, 18, 24 months</td>
-                                        <td class="p-3 text-blue-600">[2] Methods</td>
-                                    </tr>
-                                    <tr class="border-b">
-                                        <td class="p-3">Depression screening (PHQ-9)</td>
-                                        <td class="p-3">Patient questionnaire</td>
-                                        <td class="p-3">Baseline, 12 and 24 months</td>
-                                        <td class="p-3 text-blue-600">[2] Methods</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <!-- Result -->
-                        <div class="negative-result p-5 rounded-xl">
-                            <h4 class="text-lg font-bold text-red-700 mb-2">📊 Study Result: NEGATIVE</h4>
-                            <ul class="text-sm space-y-1">
-                                <li>• <strong>Primary endpoint (all-cause mortality):</strong> HR 0.97 (95% CI 0.67-1.41, p=0.87)</li>
-                                <li>• <strong>Secondary endpoint (CV death + HF hospitalization):</strong> HR 0.89 (95% CI 0.67-1.19, p=0.44)</li>
-                                <li>• <strong>n=710</strong> patients, 81% compliant with daily data transfer</li>
-                                <li>• <strong>Median follow-up:</strong> 26 months (minimum 12 months)</li>
-                            </ul>
-                            <p class="text-xs mt-2 text-gray-600">[2] "RTM compared with usual care was not associated with a reduction in all-cause mortality"</p>
-                        </div>
-                    </div>
-
-                    <div class="lang-content" data-lang="de">
-                        <h3 class="text-2xl font-bold text-blue-700 mb-4">📋 Einschluss- & Stabilitätskriterien</h3>
-                        <p class="mb-4">NYHA II-III, LVEF ≤35%, stabile ambulante Patienten, optimal behandelt. 24/7 ärztliche Überwachung in 2 telemedizinischen Zentren (Berlin, Stuttgart). <span class="reference">[Ref 2]</span></p>
-                    </div>
-
-                    <div class="lang-content" data-lang="fr">
-                        <h3 class="text-2xl font-bold text-blue-700 mb-4">📋 Critères d'Inclusion & Stabilité</h3>
-                        <p class="mb-4">NYHA II-III, FEVG ≤35%, patients ambulatoires stables, traitement optimal. Surveillance médicale 24h/24 dans 2 centres télémédicaux. <span class="reference">[Réf 2]</span></p>
-                    </div>
-
-                    <div class="lang-content" data-lang="it">
-                        <h3 class="text-2xl font-bold text-blue-700 mb-4">📋 Criteri di Inclusione & Stabilità</h3>
-                        <p class="mb-4">NYHA II-III, FEVS ≤35%, pazienti ambulatoriali stabili, trattamento ottimale. Sorveglianza medica 24/7 in 2 centri telemedici. <span class="reference">[Rif 2]</span></p>
-                    </div>
-                </div>
+            <div class="lang-content" data-lang="it">
+                <h2 class="text-2xl font-bold text-cyan-700 mb-4">6. Rete di Telemonitoraggio Olandese</h2>
+                <p>Iniziativa nazionale per strutturare il telemonitoraggio nelle cure SC. <span class="ref">[Rif 6]</span></p>
             </div>
         </section>
 
-        <!-- ============================================ -->
-        <!-- STUDY 3: TIM-HF2 (Lancet 2018) -->
-        <!-- ============================================ -->
-        <section id="tim-hf2" class="mb-12 study-section page-break">
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-                <div class="study-header-3 text-white p-6">
-                    <div class="lang-content active" data-lang="en">
-                        <h2 class="text-3xl font-bold">3. TIM-HF2 Study (Lancet 2018) ⭐</h2>
-                        <p class="mt-2 opacity-90">Telemedical Interventional Management in Heart Failure II - The Positive Trial</p>
-                        <p class="text-sm mt-1 opacity-75">Koehler F et al. Lancet. 2018;392:1047-1057 <span class="reference">[Ref 3]</span></p>
-                    </div>
-                    <div class="lang-content" data-lang="de">
-                        <h2 class="text-3xl font-bold">3. TIM-HF2 Studie (Lancet 2018) ⭐</h2>
-                        <p class="mt-2 opacity-90">Telemedizinische Interventionelle Überwachung II - Die Positive Studie</p>
-                    </div>
-                    <div class="lang-content" data-lang="fr">
-                        <h2 class="text-3xl font-bold">3. Étude TIM-HF2 (Lancet 2018) ⭐</h2>
-                        <p class="mt-2 opacity-90">Gestion Interventionnelle Télémédicale II - L'Essai Positif</p>
-                    </div>
-                    <div class="lang-content" data-lang="it">
-                        <h2 class="text-3xl font-bold">3. Studio TIM-HF2 (Lancet 2018) ⭐</h2>
-                        <p class="mt-2 opacity-90">Gestione Interventistica Telemedica II - Lo Studio Positivo</p>
-                    </div>
-                </div>
-
-                <div class="p-6">
-                    <div class="lang-content active" data-lang="en">
-                        <div class="positive-result p-4 mb-6 rounded-lg">
-                            <p class="font-bold text-green-700">🏆 KEY LEARNING FROM TIM-HF: Patient selection is crucial!</p>
-                            <p class="text-sm mt-1">TIM-HF2 refined inclusion criteria based on post-hoc analysis of TIM-HF showing benefit in subgroup with recent hospitalization and without depression.</p>
-                        </div>
-
-                        <!-- INCLUSION CRITERIA -->
-                        <h3 class="text-2xl font-bold text-green-700 mb-4">📋 Refined Inclusion & Stability Criteria</h3>
-                        <div class="overflow-x-auto mb-6">
-                            <table class="criteria-table w-full text-sm">
-                                <thead>
-                                    <tr>
-                                        <th class="p-3 text-left">Criterion</th>
-                                        <th class="p-3 text-left">TIM-HF2 (Refined)</th>
-                                        <th class="p-3 text-left">vs. TIM-HF</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="font-bold">LVEF</td>
-                                        <td><strong>≤45%</strong></td>
-                                        <td class="text-gray-500">Was ≤35%</td>
-                                    </tr>
-                                    <tr class="bg-gray-50">
-                                        <td class="font-bold">NYHA Class</td>
-                                        <td><strong>II or III</strong></td>
-                                        <td class="text-gray-500">Same</td>
-                                    </tr>
-                                    <tr class="bg-yellow-50">
-                                        <td class="font-bold">🆕 Recent Hospitalization</td>
-                                        <td><strong>REQUIRED: HF hospitalization within 12 months</strong></td>
-                                        <td class="text-green-600 font-bold">NEW criterion!</td>
-                                    </tr>
-                                    <tr class="bg-yellow-50">
-                                        <td class="font-bold">🆕 Depression Screening</td>
-                                        <td><strong>PHQ-9 score ≤9</strong> (excludes moderate-severe depression)</td>
-                                        <td class="text-green-600 font-bold">NEW criterion!</td>
-                                    </tr>
-                                    <tr>
-                                        <td class="font-bold">Medical Therapy</td>
-                                        <td>On stable heart failure therapy</td>
-                                        <td class="text-gray-500">Same</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <div class="alert-box p-4 mb-6 rounded-lg">
-                            <p class="font-bold">⚠️ Key Exclusion: Depression (PHQ-9 >9)</p>
-                            <p class="text-sm mt-1">Post-hoc analysis of TIM-HF showed patients with depression (PHQ-9 >9) did not benefit from telemonitoring. This was incorporated as key exclusion criterion in TIM-HF2. <span class="text-blue-600">[3]</span></p>
-                        </div>
-
-                        <!-- INTERVENTION PROTOCOL -->
-                        <h3 class="text-2xl font-bold text-green-700 mb-4">⚙️ Enhanced Intervention Protocol</h3>
-
-                        <div class="grid md:grid-cols-2 gap-6 mb-6">
-                            <div class="role-physician text-white p-5 rounded-xl">
-                                <h4 class="text-xl font-bold mb-3">👨‍⚕️ TELEMEDICAL CENTER (24/7)</h4>
-                                <div class="bg-white/20 p-4 rounded-lg mb-3">
-                                    <h5 class="font-bold">⏰ Enhanced Availability</h5>
-                                    <ul class="text-sm space-y-1 mt-2">
-                                        <li>• <strong>24/7 physician-led monitoring</strong></li>
-                                        <li>• Structured remote patient management</li>
-                                        <li>• <strong>Direct treatment authority</strong></li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white/20 p-4 rounded-lg">
-                                    <h5 class="font-bold">⚕️ Key Enhancement vs TIM-HF</h5>
-                                    <ul class="text-sm space-y-1 mt-2">
-                                        <li>• Can <strong>institute treatment directly</strong></li>
-                                        <li>• Not just recommendations - direct action</li>
-                                        <li>• Collaborative approach with local MD</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="role-nurse text-white p-5 rounded-xl">
-                                <h4 class="text-xl font-bold mb-3">👩‍⚕️ LOCAL CARE TEAM</h4>
-                                <div class="bg-white/20 p-4 rounded-lg mb-3">
-                                    <h5 class="font-bold">📞 Structured Contact</h5>
-                                    <ul class="text-sm space-y-1 mt-2">
-                                        <li>• Monthly structured patient contact</li>
-                                        <li>• Individualized therapy optimization</li>
-                                        <li>• Education and self-care support</li>
-                                    </ul>
-                                </div>
-                                <div class="bg-white/20 p-4 rounded-lg">
-                                    <h5 class="font-bold">🏥 In-Person Visits</h5>
-                                    <ul class="text-sm space-y-1 mt-2">
-                                        <li>• Collaborative care with primary physician</li>
-                                        <li>• Personalized follow-up based on risk</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Equipment Enhancement -->
-                        <div class="bg-gray-100 p-5 rounded-xl mb-6">
-                            <h4 class="text-lg font-bold mb-3">📱 Enhanced Monitoring Equipment</h4>
-                            <div class="grid md:grid-cols-5 gap-3">
-                                <div class="bg-white p-3 rounded-lg text-center">
-                                    <div class="text-2xl mb-1">📊</div>
-                                    <h5 class="font-bold text-green-700 text-sm">3-lead ECG</h5>
-                                </div>
-                                <div class="bg-white p-3 rounded-lg text-center">
-                                    <div class="text-2xl mb-1">💓</div>
-                                    <h5 class="font-bold text-green-700 text-sm">Blood Pressure</h5>
-                                </div>
-                                <div class="bg-white p-3 rounded-lg text-center">
-                                    <div class="text-2xl mb-1">⚖️</div>
-                                    <h5 class="font-bold text-green-700 text-sm">Body Weight</h5>
-                                </div>
-                                <div class="bg-white p-3 rounded-lg text-center bg-yellow-50 border-2 border-yellow-400">
-                                    <div class="text-2xl mb-1">💨</div>
-                                    <h5 class="font-bold text-green-700 text-sm">🆕 SpO2</h5>
-                                </div>
-                                <div class="bg-white p-3 rounded-lg text-center">
-                                    <div class="text-2xl mb-1">📱</div>
-                                    <h5 class="font-bold text-green-700 text-sm">Tablet PC</h5>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Result -->
-                        <div class="positive-result p-5 rounded-xl">
-                            <h4 class="text-lg font-bold text-green-700 mb-2">📊 Study Result: POSITIVE ✓</h4>
-                            <ul class="text-sm space-y-1">
-                                <li>• <strong>Primary endpoint:</strong> % days lost to unplanned CV hospitalization or death: <strong>4.88% vs 6.64% (p=0.046)</strong></li>
-                                <li>• <strong>All-cause mortality:</strong> <strong>7.86% vs 11.34% (HR 0.70, p=0.028)</strong></li>
-                                <li>• <strong>n=1,571</strong> patients (765 RPM, 773 usual care)</li>
-                                <li>• <strong>Follow-up:</strong> 12 months</li>
-                            </ul>
-                            <p class="text-xs mt-2 text-gray-600">[3] "Remote patient management reduced the percentage of days lost to unplanned cardiovascular hospital admissions and all-cause death"</p>
-                        </div>
-                    </div>
-
-                    <div class="lang-content" data-lang="de">
-                        <h3 class="text-2xl font-bold text-green-700 mb-4">📋 Verfeinerte Einschlusskriterien</h3>
-                        <p class="mb-4">LVEF ≤45%, NYHA II-III, HI-Hospitalisierung innerhalb 12 Monaten, PHQ-9 ≤9 (Ausschluss Depression). <span class="reference">[Ref 3]</span></p>
-                        <div class="positive-result p-5 rounded-xl">
-                            <h4 class="text-lg font-bold text-green-700 mb-2">📊 Studienergebnis: POSITIV ✓</h4>
-                            <p>Primärer Endpunkt: 4,88% vs 6,64% (p=0,046). Gesamtmortalität: 7,86% vs 11,34% (p=0,028)</p>
-                        </div>
-                    </div>
-
-                    <div class="lang-content" data-lang="fr">
-                        <h3 class="text-2xl font-bold text-green-700 mb-4">📋 Critères d'Inclusion Affinés</h3>
-                        <p class="mb-4">FEVG ≤45%, NYHA II-III, hospitalisation IC dans les 12 mois, PHQ-9 ≤9 (exclusion dépression). <span class="reference">[Réf 3]</span></p>
-                    </div>
-
-                    <div class="lang-content" data-lang="it">
-                        <h3 class="text-2xl font-bold text-green-700 mb-4">📋 Criteri di Inclusione Raffinati</h3>
-                        <p class="mb-4">FEVS ≤45%, NYHA II-III, ospedalizzazione SC entro 12 mesi, PHQ-9 ≤9 (esclusione depressione). <span class="reference">[Rif 3]</span></p>
-                    </div>
-                </div>
-            </div>
+        <!-- =========================================== -->
+        <!-- REFERENCES -->
+        <!-- =========================================== -->
+        <section class="mb-10 bg-slate-800 text-white rounded-xl p-6 page-break">
+            <h2 class="text-2xl font-bold mb-4">📚 References</h2>
+            <ol class="space-y-3 text-sm">
+                <li class="border-b border-slate-600 pb-2">
+                    <strong>[1]</strong> Chaudhry SI, Mattera JA, Curtis JP, et al. Telemonitoring in patients with heart failure. <em>N Engl J Med</em>. 2010;363(24):2301-2309. doi:10.1056/NEJMoa1010029
+                </li>
+                <li class="border-b border-slate-600 pb-2">
+                    <strong>[2]</strong> Koehler F, Winkler S, Schieber M, et al. Impact of remote telemedical management on mortality and hospitalizations in ambulatory patients with chronic heart failure: the telemedical interventional monitoring in heart failure study. <em>Circulation</em>. 2011;124:1719-1726. doi:10.1161/CIRCULATIONAHA.111.018473
+                </li>
+                <li class="border-b border-slate-600 pb-2">
+                    <strong>[3]</strong> Koehler F, Koehler K, Deckwart O, et al. Efficacy of telemedical interventional management in patients with heart failure (TIM-HF2): a randomised, controlled, parallel-group, unmasked trial. <em>Lancet</em>. 2018;392:1047-1057. doi:10.1016/S0140-6736(18)31880-4
+                </li>
+                <li class="border-b border-slate-600 pb-2">
+                    <strong>[4]</strong> Girerd N, Barbet V, Seronde MF, et al. Association of a remote monitoring programme with all-cause mortality and hospitalizations in patients with heart failure: National-scale, real-world evidence from a 3-year propensity score analysis of the TELESAT-HF study. <em>Eur J Heart Fail</em>. 2025;27(9):1658-1669. doi:10.1002/ejhf.3563
+                </li>
+                <li class="border-b border-slate-600 pb-2">
+                    <strong>[5]</strong> Zheng J, Mednick T, Heidenreich PA, Sandhu AT. Pharmacist- and Nurse-Led Medical Optimization in Heart Failure: A Systematic Review and Meta-Analysis. <em>J Card Fail</em>. 2023;29(7):1000-1013. doi:10.1016/j.cardfail.2023.03.012
+                </li>
+                <li class="border-b border-slate-600 pb-2">
+                    <strong>[6]</strong> Netherlands Heart Failure Telemonitoring Network. Structuring telemonitoring in heart failure care in The Netherlands: design and operational protocol of a nationwide initiative. <em>Eur Heart J Digital Health</em>. 2025. doi:10.1093/ehjdh/ztaf130
+                </li>
+                <li>
+                    <strong>[7]</strong> NEJM Catalyst. What Is Telehealth? <em>NEJM Catalyst</em>. 2018. doi:10.1056/CAT.18.0268
+                </li>
+            </ol>
         </section>
 
-        <!-- Additional studies would continue in the same detailed format... -->
-        <!-- For brevity, I'll add summary sections for remaining studies -->
-
-        <!-- REFERENCES SECTION -->
-        <section id="references" class="mb-12 page-break">
-            <div class="bg-slate-800 text-white rounded-2xl p-8">
-                <div class="lang-content active" data-lang="en">
-                    <h2 class="text-3xl font-bold mb-6">📚 References</h2>
-                    <ol class="space-y-4 text-sm">
-                        <li class="border-b border-slate-600 pb-3">
-                            <strong>[1] Tele-HF:</strong> Chaudhry SI, Mattera JA, Curtis JP, et al. Telemonitoring in patients with heart failure. <em>N Engl J Med</em>. 2010;363(24):2301-2309. doi:10.1056/NEJMoa1010029
-                        </li>
-                        <li class="border-b border-slate-600 pb-3">
-                            <strong>[2] TIM-HF:</strong> Koehler F, Winkler S, Schieber M, et al. Impact of remote telemedical management on mortality and hospitalizations in ambulatory patients with chronic heart failure: the telemedical interventional monitoring in heart failure study. <em>Circulation</em>. 2011;124:1719-1726. doi:10.1161/CIRCULATIONAHA.111.018473
-                        </li>
-                        <li class="border-b border-slate-600 pb-3">
-                            <strong>[3] TIM-HF2:</strong> Koehler F, Koehler K, Deckwart O, et al. Efficacy of telemedical interventional management in patients with heart failure (TIM-HF2): a randomised, controlled, parallel-group, unmasked trial. <em>Lancet</em>. 2018;392:1047-1057. doi:10.1016/S0140-6736(18)31880-4
-                        </li>
-                        <li class="border-b border-slate-600 pb-3">
-                            <strong>[4] BEAT-HF:</strong> Ong MK, Romano PS, Edgington S, et al. Effectiveness of remote patient monitoring after discharge of hospitalized patients with heart failure: the Better Effectiveness After Transition–Heart Failure (BEAT-HF) randomized clinical trial. <em>JAMA Intern Med</em>. 2016;176(3):310-318. doi:10.1001/jamainternmed.2015.7712
-                        </li>
-                        <li class="border-b border-slate-600 pb-3">
-                            <strong>[5] TELESAT-HF:</strong> Girerd N, Barbet V, Seronde MF, et al. Association of a remote monitoring programme with all-cause mortality and hospitalizations in patients with heart failure: National-scale, real-world evidence from a 3-year propensity score analysis of the TELESAT-HF study. <em>Eur J Heart Fail</em>. 2025;27(9):1658-1669. doi:10.1002/ejhf.3563
-                        </li>
-                        <li class="border-b border-slate-600 pb-3">
-                            <strong>[6] HerzMobil Tirol:</strong> Egelseer-Bruendl T, Jahn B, Arvandi M, et al. Cost-effectiveness of a multidimensional post-discharge disease management program for heart failure patients—economic evaluation along a one-year observation period. <em>Clin Res Cardiol</em>. 2024;113(8):1232-1241. doi:10.1007/s00392-024-02395-5
-                        </li>
-                        <li class="border-b border-slate-600 pb-3">
-                            <strong>[7] Nurse-Led GDMT:</strong> Zheng J, Mednick T, Heidenreich PA, Sandhu AT. Pharmacist- and Nurse-Led Medical Optimization in Heart Failure: A Systematic Review and Meta-Analysis. <em>J Card Fail</em>. 2023;29(7):1000-1013. doi:10.1016/j.cardfail.2023.03.012
-                        </li>
-                    </ol>
-                </div>
-                <div class="lang-content" data-lang="de">
-                    <h2 class="text-3xl font-bold mb-6">📚 Referenzen</h2>
-                    <p class="mb-4">Siehe englische Version für vollständige Referenzliste.</p>
-                </div>
-                <div class="lang-content" data-lang="fr">
-                    <h2 class="text-3xl font-bold mb-6">📚 Références</h2>
-                    <p class="mb-4">Voir la version anglaise pour la liste complète des références.</p>
-                </div>
-                <div class="lang-content" data-lang="it">
-                    <h2 class="text-3xl font-bold mb-6">📚 Riferimenti</h2>
-                    <p class="mb-4">Vedere la versione inglese per l'elenco completo dei riferimenti.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Download Section -->
-        <section class="mb-12 no-print">
-            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-2xl p-8 text-center">
-                <div class="lang-content active" data-lang="en">
-                    <h2 class="text-3xl font-bold mb-4">📥 Download PDF Version</h2>
-                    <p class="mb-6">Get a printable PDF version of this comprehensive referenced guide</p>
-                    <button onclick="window.print()" class="btn btn-lg bg-white text-indigo-600 hover:bg-gray-100">
-                        🖨️ Print / Save as PDF
-                    </button>
-                </div>
-                <div class="lang-content" data-lang="de">
-                    <h2 class="text-3xl font-bold mb-4">📥 PDF-Version Herunterladen</h2>
-                    <button onclick="window.print()" class="btn btn-lg bg-white text-indigo-600 hover:bg-gray-100">🖨️ Drucken / Als PDF Speichern</button>
-                </div>
-                <div class="lang-content" data-lang="fr">
-                    <h2 class="text-3xl font-bold mb-4">📥 Télécharger la Version PDF</h2>
-                    <button onclick="window.print()" class="btn btn-lg bg-white text-indigo-600 hover:bg-gray-100">🖨️ Imprimer / Enregistrer en PDF</button>
-                </div>
-                <div class="lang-content" data-lang="it">
-                    <h2 class="text-3xl font-bold mb-4">📥 Scarica Versione PDF</h2>
-                    <button onclick="window.print()" class="btn btn-lg bg-white text-indigo-600 hover:bg-gray-100">🖨️ Stampa / Salva come PDF</button>
-                </div>
+        <!-- Download -->
+        <section class="mb-10 no-print">
+            <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl p-6 text-center">
+                <h2 class="text-2xl font-bold mb-4">📥 Download PDF Version</h2>
+                <button onclick="window.print()" class="btn btn-lg bg-white text-indigo-600 hover:bg-gray-100">
+                    🖨️ Print / Save as PDF
+                </button>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-8">
-        <div class="container mx-auto px-4 text-center">
-            <p class="mb-2">© 2025 Heart Failure Telemonitoring Studies - Complete Clinical Protocol Guide</p>
-            <p class="text-sm text-gray-400">All information referenced to original peer-reviewed publications. Consult original sources for complete details.</p>
-        </div>
+    <footer class="bg-gray-900 text-white py-6 text-center text-sm">
+        <p>© 2025 Heart Failure Telemonitoring Studies - Complete Clinical Protocol Guide</p>
+        <p class="text-gray-400 mt-1">All information referenced to original peer-reviewed publications</p>
     </footer>
 
     <script>
@@ -956,21 +741,13 @@
             document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
             document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => el.classList.add('active'));
             document.querySelectorAll('[id^="btn-"]').forEach(btn => {
-                btn.classList.remove('btn-active', 'bg-white/40');
+                btn.classList.remove('bg-white/40');
                 btn.classList.add('bg-white/20');
             });
-            const activeBtn = document.getElementById(`btn-${lang}`);
-            if (activeBtn) {
-                activeBtn.classList.add('btn-active', 'bg-white/40');
-                activeBtn.classList.remove('bg-white/20');
-            }
-            localStorage.setItem('preferred-language', lang);
+            document.getElementById(`btn-${lang}`)?.classList.replace('bg-white/20', 'bg-white/40');
+            localStorage.setItem('hf-telemonitoring-lang', lang);
         }
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            const savedLang = localStorage.getItem('preferred-language') || 'en';
-            setLanguage(savedLang);
-        });
+        document.addEventListener('DOMContentLoaded', () => setLanguage(localStorage.getItem('hf-telemonitoring-lang') || 'en'));
     </script>
 </body>
 </html>
