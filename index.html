@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heart Failure Telemonitoring Studies - Comprehensive Review</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.19/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .study-section { scroll-margin-top: 80px; }
+        .nav-sticky { position: sticky; top: 0; z-index: 50; }
+        .table-compact td, .table-compact th { padding: 0.5rem; font-size: 0.875rem; }
+        details summary { cursor: pointer; }
+        details summary::-webkit-details-marker { display: none; }
+        details summary::before { content: "▶ "; font-size: 0.8em; }
+        details[open] summary::before { content: "▼ "; }
+        @media print {
+            .no-print { display: none !important; }
+            details { display: block !important; }
+            details[open] summary ~ * { display: block !important; }
+        }
+    </style>
+</head>
+<body class="bg-base-200 min-h-screen">
+    <!-- Navigation -->
+    <div class="nav-sticky bg-primary text-primary-content shadow-lg no-print">
+        <div class="navbar container mx-auto">
+            <div class="flex-1">
+                <a class="btn btn-ghost text-xl" href="#top">HF Telemonitoring Review</a>
+            </div>
+            <div class="flex-none">
+                <ul class="menu menu-horizontal px-1">
+                    <li><a href="#studies">Studies</a></li>
+                    <li><a href="#references">References</a></li>
+                    <li><a href="#downloads">Downloads</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero bg-gradient-to-r from-primary to-secondary text-primary-content py-12" id="top">
+        <div class="hero-content text-center">
+            <div class="max-w-4xl">
+                <h1 class="text-4xl font-bold mb-4">Heart Failure Telemonitoring Studies</h1>
+                <p class="text-xl mb-2">Comprehensive Systematic Review of Study Protocols</p>
+                <p class="opacity-80">Extracted from 25 publications on remote patient monitoring in heart failure</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-8" id="studies">
+        
+        <!-- Table of Contents -->
+        <div class="card bg-base-100 shadow-xl mb-8 no-print">
+            <div class="card-body">
+                <h2 class="card-title text-2xl mb-4">📋 Table of Contents</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+                    <a href="#timhf2" class="link link-primary">TIM-HF2 Trial (Koehler 2018)</a>
+                    <a href="#timhf" class="link link-primary">TIM-HF Trial (Koehler 2011)</a>
+                    <a href="#inh" class="link link-primary">INH Study (Angermann 2012)</a>
+                    <a href="#telehf" class="link link-primary">Tele-HF Trial (Chaudhry 2010)</a>
+                    <a href="#osicat" class="link link-primary">OSICAT Trial (Galinier 2020)</a>
+                    <a href="#herzmobil" class="link link-primary">HerzMobil Tirol (Poelzl 2021)</a>
+                    <a href="#scad" class="link link-primary">SCAD France (Sabatier 2022)</a>
+                    <a href="#netherlands" class="link link-primary">Netherlands hTMS (Jansen 2025)</a>
+                    <a href="#marhf" class="link link-primary">MAR-HF Titration (Ruiz-Bustillo 2025)</a>
+                    <a href="#telesat" class="link link-primary">TELESAT-HF (Girerd 2025)</a>
+                    <a href="#providence" class="link link-primary">Providence/Cadence (Feldman 2025)</a>
+                    <a href="#algorithms" class="link link-primary">Algorithms Review (Brons 2018)</a>
+                    <a href="#jacc" class="link link-primary">JACC Statement (Stevenson 2023)</a>
+                    <a href="#germany-review" class="link link-primary">Germany 20-Year Review (Spethmann 2024)</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 1: TIM-HF2 -->
+        <div id="timhf2" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">TIM-HF2 Trial</h2>
+                    <span class="badge badge-success">RCT</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Koehler F et al., Lancet 2018 | Germany | n=1,571</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <!-- Inclusion Criteria -->
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Inclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>NYHA functional class II or III</li>
+                                <li>Hospital admission for worsening HF within 12 months before randomization</li>
+                                <li>LVEF ≤45%, OR LVEF >45% with oral diuretic treatment</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- Exclusion Criteria -->
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-error/20">Exclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Major depression (PHQ-9 score >9)</li>
+                                <li>On haemodialysis</li>
+                                <li>Hospital admission within 7 days before randomization</li>
+                                <li>LVAD implanted</li>
+                                <li>Coronary revascularization within 28 days</li>
+                                <li>CRT implantation within 28 days</li>
+                                <li>Scheduled procedures (revascularization, TAVI, MitraClip, CRT) within 3 months</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- Patient Stratification -->
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-warning/20">Stable vs Unstable Classification</summary>
+                        <div class="collapse-content">
+                            <p class="text-sm mb-2"><strong>Method:</strong> Risk stratification using biomarkers</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Low/High risk defined by MR-proADM values at baseline and follow-up</li>
+                                <li>Risk category re-evaluated every 3 months</li>
+                                <li>Biomarker thresholds combined with daily transmitted data</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- Biomarkers -->
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-success/20">Biomarkers & Decompensation Indicators</summary>
+                        <div class="collapse-content">
+                            <p class="text-sm font-semibold">Biomarkers Monitored:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm mb-2">
+                                <li>NT-proBNP (baseline and 3-monthly follow-up)</li>
+                                <li>MR-proADM (baseline and 3-monthly; used for risk stratification)</li>
+                            </ul>
+                            <p class="text-sm font-semibold">Vital Signs (Daily):</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Body weight, Blood pressure, Heart rate</li>
+                                <li>SpO2, ECG (heart rhythm analysis)</li>
+                                <li>Self-rated health status (scale 1-5)</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <!-- Remote Monitoring Scheme -->
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-primary/20">Remote Monitoring Scheme</summary>
+                        <div class="collapse-content">
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full">
+                                    <tr><td class="font-semibold">Frequency</td><td>Daily (at fixed time)</td></tr>
+                                    <tr><td class="font-semibold">Data Transmitted</td><td>Weight, BP, HR, SpO2, ECG, Self-rated health</td></tr>
+                                    <tr><td class="font-semibold">Technology</td><td>3-channel ECG device (PhysioMem PM 1000), BP device (UA767PBT), Scales (Seca 861), SpO2 (Masimo), Digital tablet (Physio-Gate PG 1000), Mobile phone</td></tr>
+                                    <tr><td class="font-semibold">Transmission</td><td>Automated via mobile network (VPN secured)</td></tr>
+                                    <tr><td class="font-semibold">Data Review</td><td>TMC at Charité-Berlin (physicians + HF nurses)</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </details>
+
+                    <!-- Intervention Protocol -->
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-secondary/20">Intervention Protocol</summary>
+                        <div class="collapse-content">
+                            <p class="text-sm font-semibold">Who Delivered:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm mb-2">
+                                <li>TMC staff: 4 physicians + 5 nurses (full-time daytime)</li>
+                                <li>Night shift: 1 physician on-site + 1 on-call</li>
+                                <li>Certified nurses for home installation</li>
+                            </ul>
+                            <p class="text-sm font-semibold">Interventions:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm mb-2">
+                                <li>Initial HF education during system installation</li>
+                                <li>Monthly structured telephone interviews</li>
+                                <li>Medication changes (3,546 interventions total)</li>
+                                <li>Diuretic adjustments, GDMT uptitration</li>
+                                <li>Contact within 24h if data missing</li>
+                                <li>3-monthly reports to local physicians</li>
+                            </ul>
+                            <p class="text-sm font-semibold">Response Times:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Daily data review</li>
+                                <li>Monthly minimum patient contact</li>
+                                <li>24/7 emergency availability</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/guKwgUo2jQosLANLq9WLcE/Copy-of-TIM-.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 2: TIM-HF -->
+        <div id="timhf" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">TIM-HF Trial</h2>
+                    <span class="badge badge-success">RCT</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Koehler F et al., Circulation 2011 | Germany | n=710</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Inclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Age ≥18 years</li>
+                                <li>Stable, ambulatory patients with chronic HF</li>
+                                <li>NYHA functional class II or III</li>
+                                <li>LVEF ≤35%</li>
+                                <li>For LVEF 26-35%: ≥1 HF hospitalization OR IV diuretics in past 24 months</li>
+                                <li>For LVEF ≤25%: No prior hospitalization required</li>
+                                <li>Optimally treated for HF per guidelines</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-warning/20">Stable vs Unstable Classification</summary>
+                        <div class="collapse-content">
+                            <p class="text-sm">Study specifically enrolled <strong>stable, ambulatory</strong> CHF patients only. Stability defined by:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Ambulatory status maintained</li>
+                                <li>NYHA class II-III</li>
+                                <li>Optimal medical treatment</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-success/20">Biomarkers & Indicators</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>NT-proBNP: baseline 2478±3266 pg/mL</li>
+                                <li>MR-proADM: 1.00±0.50 nmol/L</li>
+                                <li>MR-proANP: 334±237 pmol/L</li>
+                                <li><strong>Daily:</strong> Body weight, BP, 3-lead ECG</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-primary/20">Remote Monitoring Scheme</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Devices:</strong> Wireless Bluetooth → PDA → Cell phone (EDGE)</li>
+                                <li><strong>Data:</strong> 3-lead ECG, BP, Weight (50g precision scale)</li>
+                                <li><strong>Frequency:</strong> Daily self-assessment</li>
+                                <li><strong>Centers:</strong> Two TMCs (Berlin + Stuttgart), 24/7, physician-led</li>
+                                <li><strong>Emergency:</strong> Home emergency call system included</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200 lg:col-span-2">
+                        <summary class="collapse-title font-bold bg-secondary/20">Intervention Protocol</summary>
+                        <div class="collapse-content">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <p class="font-semibold">Who:</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Physician-led TMC staff (24/7)</li>
+                                        <li>Two centers with shared electronic records</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">What:</p>
+                                    <ul class="list-disc list-inside text-sm">
+                                        <li>Measurement verification</li>
+                                        <li>Patient consultation</li>
+                                        <li>Treatment initiation as needed</li>
+                                        <li>≥3-monthly contact with local physician</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/dAdrk9zm4WPMNvJ3QkKtTH/TIM-HF-koehl.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 3: INH -->
+        <div id="inh" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">INH Study (HeartNetCare-HF)</h2>
+                    <span class="badge badge-success">RCT</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Angermann CE et al., Circ Heart Fail 2012 | Germany | n=715</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Inclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Age ≥18 years</li>
+                                <li>Hospitalized with decompensated HF signs/symptoms:
+                                    <ul class="list-disc list-inside ml-4">
+                                        <li>Dyspnea at rest or minimal exercise PLUS ≥1 of:</li>
+                                        <li>Raised JVP, peripheral edema, S3, pulmonary congestion</li>
+                                    </ul>
+                                </li>
+                                <li>LVEF ≤40% at randomization</li>
+                                <li>Disabled patients with family assistance eligible</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-error/20">Exclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Only new-onset structural heart disease</li>
+                                <li>Logistic reasons (distant residence, no telephone)</li>
+                                <li>Severe cognitive dysfunction/Alzheimer's/deafness</li>
+                                <li>Severe noncardiac disorders</li>
+                                <li>Insufficient German language</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-warning/20">Patient Stratification</summary>
+                        <div class="collapse-content">
+                            <p class="text-sm">Intervention frequency individualized by NYHA class:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>NYHA III-IV:</strong> Weekly or fortnightly contacts</li>
+                                <li><strong>NYHA I-II:</strong> Monthly contacts</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-success/20">Monitoring & Symptoms</summary>
+                        <div class="collapse-content">
+                            <p class="text-sm font-semibold">Vital Signs:</p>
+                            <ul class="list-disc list-inside text-sm mb-2">
+                                <li>Weight (electronic scales provided)</li>
+                                <li>Blood pressure (gauges provided)</li>
+                                <li>Heart rate</li>
+                            </ul>
+                            <p class="text-sm font-semibold">19-Item START Questionnaire:</p>
+                            <ul class="list-disc list-inside text-sm">
+                                <li>Worsening HF indicators (edema, dyspnea, vertigo, fatigue)</li>
+                                <li>Cardiac symptoms, medication adherence</li>
+                                <li>Healthcare utilization, mood, general well-being</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200 lg:col-span-2">
+                        <summary class="collapse-title font-bold bg-secondary/20">Intervention Protocol (Nurse-Coordinated)</summary>
+                        <div class="collapse-content">
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full">
+                                    <tr>
+                                        <td class="font-semibold w-1/4">Who</td>
+                                        <td>4 specialist nurses (hospital-based call center), weekly cardiologist supervision, bimonthly psychologist supervision</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">What</td>
+                                        <td>
+                                            <ul class="list-disc list-inside">
+                                                <li>Telephone-based structured monitoring (avg 12.5 min/call)</li>
+                                                <li>Medication uptitration (60% achieved)</li>
+                                                <li>Diuretic self-adjustment teaching</li>
+                                                <li>Patient education (92%), drug education (84%)</li>
+                                                <li>Specialist care coordination</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">Frequency</td>
+                                        <td>
+                                            <ul class="list-disc list-inside">
+                                                <li>Weekly during first month post-discharge</li>
+                                                <li>Then: NYHA III-IV = weekly/fortnightly; NYHA I-II = monthly</li>
+                                                <li>Average: 2.3 calls/patient-month</li>
+                                            </ul>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="font-semibold">Escalation</td>
+                                        <td>Nurse → Physician consultation → GP interaction (74% of patients) → Specialist referral (66%)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/JPcMLYAN5KDyPiqTWHXDXf/Copy-of-ange.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 4: Tele-HF -->
+        <div id="telehf" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">Tele-HF Trial</h2>
+                    <span class="badge badge-success">RCT</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Chaudhry SI et al., NEJM 2010 | USA | n=1,653</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Inclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Hospitalized for HF in previous 30 days</li>
+                                <li>Enrolled at 33 cardiology practices (2006-2009)</li>
+                                <li>Written informed consent</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-error/20">Exclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Long-term nursing home residence</li>
+                                <li>Life expectancy <6 months (non-HF causes)</li>
+                                <li>Unable to stand on scale</li>
+                                <li>Severe cognitive impairment</li>
+                                <li>Planned hospitalization for procedure</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-primary/20">Remote Monitoring Scheme</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>System:</strong> Tel-Assurance (Pharos Innovations) - IVR telephone system</li>
+                                <li><strong>Data:</strong> Daily weight, symptoms, general health, HF symptoms</li>
+                                <li><strong>Depression screening:</strong> PHQ-2 every 30 days</li>
+                                <li><strong>Transmission:</strong> Manual entry via telephone keypad</li>
+                                <li><strong>Review:</strong> Site coordinators review weekdays (except holidays)</li>
+                                <li><strong>Alerts:</strong> 29,163 variances generated (median 21/patient)</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-secondary/20">Intervention Protocol</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Who:</strong> Site coordinators + treating clinicians</li>
+                                <li><strong>What:</strong> Educational materials (HFSA), equipment demonstration, variance management</li>
+                                <li><strong>Response:</strong> Contact patients with variances; document management</li>
+                                <li><strong>Reminders:</strong> System-generated call after 2 days of non-use</li>
+                                <li><strong>Oversight:</strong> Yale Center review every 2-3 weeks</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/c39UQGdfRtaxPTfiJPzc3t/Copy-of-NEJM.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 5: OSICAT -->
+        <div id="osicat" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">OSICAT Trial</h2>
+                    <span class="badge badge-success">RCT</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Galinier M et al., Eur J Heart Fail 2020 | France | n=990</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Inclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Age ≥18 years</li>
+                                <li>Hospitalized for acute HF within 12 months</li>
+                                <li>Access to landline telephone or GPRS network</li>
+                                <li>French social security eligible</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-error/20">Exclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>No echocardiographic evaluation</li>
+                                <li>BNP <100 pg/mL or NT-proBNP <300 pg/mL</li>
+                                <li>Life expectancy <12 months</li>
+                                <li>Dialysis, heart transplant, LVAD</li>
+                                <li>Need for inotropic treatment</li>
+                                <li>Unable to use equipment</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-primary/20">Remote Monitoring</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Data:</strong> Daily body weight + 8 yes/no symptom questions</li>
+                                <li><strong>Devices:</strong> Electronic scales, symptom device</li>
+                                <li><strong>Transmission:</strong> Automated to secure server</li>
+                                <li><strong>Analysis:</strong> Expert system generates alerts automatically</li>
+                                <li><strong>Note:</strong> NO BP, HR, ECG, or SpO2 monitoring</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-secondary/20">Intervention Protocol</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Who:</strong> HF-specialized nurses</li>
+                                <li><strong>Education:</strong> Information pack + telephone calls every 3 weeks</li>
+                                <li><strong>Alert Response:</strong> Nurse contacts patient → validates alert → advises GP contact if needed → 48h follow-up call</li>
+                                <li><strong>Follow-up:</strong> Calls at 15 days, 6, 12, 18 months</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/bikmz8bgXgQpcG5LUYzWU5/Copy-of-Euro.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 6: HerzMobil Tirol -->
+        <div id="herzmobil" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">HerzMobil Tirol Programme</h2>
+                    <span class="badge badge-warning">Observational</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Poelzl G et al., Wien Klin Wochenschr 2021 | Austria | n=276 (HMT) + 276 (UC)</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Inclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Age ≥18 years</li>
+                                <li>Hospitalized with decompensated HF requiring IV diuretics</li>
+                                <li>Any LVEF (HFrEF, HFmrEF, HFpEF included)</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-error/20">Exclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Charlson Comorbidity Index >6</li>
+                                <li>Dementia</li>
+                                <li>Lack of willingness to participate</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-primary/20">Remote Monitoring Scheme</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Data:</strong> BP, HR, Weight, Well-being, Drug intake</li>
+                                <li><strong>Frequency:</strong> Daily transmission</li>
+                                <li><strong>Technology:</strong> Configured smartphone + BP monitor + Scale</li>
+                                <li><strong>Analysis:</strong> Signal processing algorithms for automatic event detection</li>
+                                <li><strong>Thresholds:</strong> Individually defined and regularly adapted per patient</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-secondary/20">Intervention Protocol (3 months)</summary>
+                        <div class="collapse-content">
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full">
+                                    <tr><td class="font-semibold">Team</td><td>HF cardiologist, specialty-trained HF nurses, network physicians (near patient's home), programme coordinator</td></tr>
+                                    <tr><td class="font-semibold">HF Nurse Role</td><td>Daily data monitoring, patient education, home visits, telephone support, medication adjustment per physician instructions</td></tr>
+                                    <tr><td class="font-semibold">Network Physician</td><td>Weekly data review, evidence-based therapy optimization</td></tr>
+                                    <tr><td class="font-semibold">Face-to-Face Visits</td><td>Week 1, Week 4, Week 12</td></tr>
+                                    <tr><td class="font-semibold">Home Visit</td><td>Immediately post-discharge</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/9a8vaxNpNpdvtBQAjBEZzN/Copy-of-Poel.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 7: SCAD France -->
+        <div id="scad" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">SCAD Programme (France)</h2>
+                    <span class="badge badge-warning">Observational</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Sabatier R et al., Eur J Heart Fail 2022 | France (Normandy) | n=766</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Inclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Hospitalized for HF (acute exacerbation, unplanned CV hospitalization with HF diagnosis, or planned HF follow-up)</li>
+                                <li>HF diagnosis by cardiologist (NYHA criteria)</li>
+                                <li>Agreed to participate in SCAD programme</li>
+                                <li>Received therapeutic education during hospitalization</li>
+                                <li>Telemonitored for ≥3 months</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-warning/20">Patient Stratification by Use Level</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Low users:</strong> <66.7% of anticipated sessions</li>
+                                <li><strong>Intermediate users:</strong> 66.7-87.5%</li>
+                                <li><strong>High users:</strong> ≥87.5% of sessions</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-primary/20">Remote Monitoring Scheme</summary>
+                        <div class="collapse-content">
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full text-sm">
+                                    <tr><th>Day</th><th>Data Type</th></tr>
+                                    <tr><td>Mon, Wed, Fri</td><td>Weight, HR, BP, cardiac symptoms</td></tr>
+                                    <tr><td>Tue, Thu</td><td>Lifestyle: diet, physical activity</td></tr>
+                                    <tr><td>Friday</td><td>Fatigue/morale (1-10 VAS), treatment compliance</td></tr>
+                                    <tr><td>Saturday</td><td>Effort training</td></tr>
+                                </table>
+                            </div>
+                            <p class="text-sm mt-2"><strong>Technology:</strong> Tactile pad with secure internet portal</p>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-success/20">Alert System</summary>
+                        <div class="collapse-content">
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full text-sm">
+                                    <tr><th>Alert Level</th><th>Triggers</th><th>Response</th></tr>
+                                    <tr><td class="text-warning font-bold">Yellow</td><td>Cough (45.5%), Oedema (48%)</td><td>Nurse calls/texts, advises corrective actions</td></tr>
+                                    <tr><td class="text-orange-500 font-bold">Orange</td><td>Weight gain (67.8%), Cough (23.5%)</td><td>Nurse calls patient; contacts GP if needed</td></tr>
+                                    <tr><td class="text-error font-bold">Red</td><td>Dyspnoea (35.2%), Oedema (24.7%), Weight gain (8.6%)</td><td>Nurse calls patient; contacts GP for immediate visit; emergency services if GP unavailable</td></tr>
+                                </table>
+                            </div>
+                            <p class="text-sm mt-2"><strong>Response times:</strong> 74.1% answered within 24h, 57.9% same day</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/uKUiYYxnZe96tczRsLEvmz/Copy-of-EHF2.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 8: Netherlands hTMS -->
+        <div id="netherlands" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">Netherlands hTMS Protocol</h2>
+                    <span class="badge badge-info">Protocol</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Jansen C et al., ESC Heart Fail 2025 | Netherlands | 7 hospitals</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Inclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Newly diagnosed with HF</li>
+                                <li>Age >18 years</li>
+                                <li>Smartphone/tablet for Thuismeten app</li>
+                                <li>Sufficient digital literacy (patient or caregiver)</li>
+                                <li>Dutch language proficient</li>
+                                <li>Access to scales and BP monitor</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-warning/20">Stable vs Unstable Protocol</summary>
+                        <div class="collapse-content">
+                            <p class="text-sm font-semibold text-error mb-2">UNSTABLE Protocol Criteria:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm mb-3">
+                                <li>Newly diagnosed HF (de novo)</li>
+                                <li>Recent HF (re)admission</li>
+                                <li>HF exacerbation requiring medication changes</li>
+                                <li>Not yet on OMT</li>
+                                <li>Symptomatic, anxious, uncertain</li>
+                                <li>Needs guidance on symptom detection</li>
+                            </ul>
+                            <p class="text-sm font-semibold text-success mb-2">STABLE Protocol Criteria:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>On OMT for ≥1 month</li>
+                                <li>Euvolaemic, stable diuretics ≥1 month</li>
+                                <li>No symptom changes ≥1 month</li>
+                                <li>Sufficient HF knowledge</li>
+                                <li>Adequate self-management</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-success/20">Alert Thresholds</summary>
+                        <div class="collapse-content">
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full text-sm">
+                                    <tr><th>Parameter</th><th>Alert Threshold</th></tr>
+                                    <tr><td>BP sudden increase</td><td>>30 mmHg</td></tr>
+                                    <tr><td>Moderate hypertension</td><td>160-179/100-109 mmHg</td></tr>
+                                    <tr><td>Severe hypertension</td><td>>180/>110 mmHg</td></tr>
+                                    <tr><td>Hypotension</td><td><90/60 mmHg</td></tr>
+                                    <tr><td>Bradycardia</td><td>≤50/min at rest</td></tr>
+                                    <tr><td>Tachycardia</td><td>≥100/min at rest</td></tr>
+                                    <tr><td>Weight change vs last</td><td>±1.5 kg</td></tr>
+                                    <tr><td>Weight vs target</td><td>≥2 kg above or below</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-secondary/20">4-Level MSC Structure</summary>
+                        <div class="collapse-content">
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full text-sm">
+                                    <tr><th>Level</th><th>Role</th><th>Function</th></tr>
+                                    <tr><td>1</td><td>Technical Support</td><td>Onboarding, app installation</td></tr>
+                                    <tr><td>2</td><td>Monitoring Nurses</td><td>Active patient contact (unstable); monitoring (stable)</td></tr>
+                                    <tr><td>3</td><td>HF Nurse Specialists</td><td>GDMT titration, diuretics, protocol transitions</td></tr>
+                                    <tr><td>4</td><td>Cardiologists</td><td>Complex situations, complications</td></tr>
+                                </table>
+                            </div>
+                            <p class="text-sm mt-2"><strong>Unstable:</strong> BP/HR/Weight Mon-Fri; phone calls every 7-14 days</p>
+                            <p class="text-sm"><strong>Stable:</strong> Vitals ≥1x/week; weekly supervision meetings</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/fZRewvoNeoqnYMbpWZSUBS/Copy-of-Jans.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 9: MAR-HF Titration -->
+        <div id="marhf" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">MAR-HF Titration Study</h2>
+                    <span class="badge badge-warning">Prospective Cohort</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Ruiz-Bustillo S et al., Eur J Cardiovasc Nurs 2025 | Spain | n=210</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Inclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>HFrEF (LVEF <40% at diagnosis or exacerbation)</li>
+                                <li>Referred for HF stabilization and drug titration</li>
+                                <li>Good candidates for telemedicine follow-up</li>
+                                <li>Newly diagnosed HFrEF (61%) or chronic with exacerbation (39%)</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-error/20">Exclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Severe psychiatric illness</li>
+                                <li>Moderate-severe cognitive impairment (without caregiver)</li>
+                                <li>Institutionalized</li>
+                                <li>Inability to follow-up</li>
+                                <li>Complete language barrier</li>
+                                <li>HF due to fixable non-cardiac cause</li>
+                                <li>Life expectancy <1 year (except if due to HF itself)</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-primary/20">Remote Monitoring (Daily)</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Data:</strong> BP, HR, Weight, HF symptoms (every morning)</li>
+                                <li><strong>Devices:</strong> Touchscreen tablet (4G), BP monitor, Scale</li>
+                                <li><strong>Biomarkers:</strong> NT-proBNP, eGFR, potassium at baseline and end</li>
+                                <li><strong>Review:</strong> Nurses monitor daily; cardiologists provide support</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-secondary/20">Nurse-Led Titration Protocol (6 months)</summary>
+                        <div class="collapse-content">
+                            <p class="text-sm font-semibold mb-2">Videoconferences every 2 weeks covering:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm mb-3">
+                                <li>Current doses and tolerance</li>
+                                <li>Hemodynamic data</li>
+                                <li>Lab results (renal function, potassium)</li>
+                                <li>Treatment goals</li>
+                            </ul>
+                            <p class="text-sm font-semibold mb-2">Median titration times achieved:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Beta-blockers: 45 days</li>
+                                <li>MRA: 65 days</li>
+                                <li>ARNI: 69 days</li>
+                                <li>All four medications: 99 days</li>
+                            </ul>
+                            <p class="text-sm mt-2"><strong>Outcome:</strong> Quadruple therapy ↑ from 63% to 75%; LVEF ↑ from 31% to 45%</p>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/XoU2LTPyT9JbaLJXciCWZ9/Copy-of-MAR-.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 10: TELESAT-HF -->
+        <div id="telesat" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">TELESAT-HF Study</h2>
+                    <span class="badge badge-warning">Real-World Evidence</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Girerd N et al., Eur J Heart Fail 2025 | France | n=35,000+</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Inclusion Criteria</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Adults in France hospitalized for HF (Aug 2018 - Dec 2021)</li>
+                                <li>HF hospitalization (strict or expanded ICD-10 definition)</li>
+                                <li>COVID period modification: HF treatment + NYHA ≥II + BNP >100 or NT-proBNP >1000 pg/mL</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-success/20">Alert Algorithm (Satelia® Cardio)</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Green:</strong> Score <12 (routine)</li>
+                                <li><strong>Orange alert:</strong> Score ≥12</li>
+                                <li><strong>Red alert:</strong> Score ≥21</li>
+                                <li><strong>NPV:</strong> 99% negative predictive value</li>
+                                <li>Frequency auto-tailored to patient risk profile</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-primary/20">Remote Monitoring</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Data:</strong> Weekly HF symptom questionnaire, regular weight</li>
+                                <li><strong>Technology:</strong> Satelia® Cardio web app or Télesphore® phone platform</li>
+                                <li><strong>Note:</strong> NO connected scales, NO oximetry, NOT 24/7</li>
+                                <li><strong>Education:</strong> 6 themes, 18 questions/cycle, ~9 weeks</li>
+                                <li><strong>Daily Challenge:</strong> 2 true/false questions + tip (twice weekly)</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-secondary/20">Intervention Protocol</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Onboarding:</strong> Nurse phone call within 48h of inclusion</li>
+                                <li><strong>Digital patients:</strong> Self-service via web app</li>
+                                <li><strong>Non-digital patients:</strong> 3 phone sessions/semester</li>
+                                <li><strong>Alert management:</strong> Many managed via phone/telemedicine (diuretic increase, NT-proBNP testing)</li>
+                                <li><strong>Staffing:</strong> 2 part-time nurses (2018) → 28 nurses (2022)</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/JTkC4HXuTN3YFoLdEeHjTc/Copy-of-Tele.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 11: Providence/Cadence -->
+        <div id="providence" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">Providence/Cadence RPC Program</h2>
+                    <span class="badge badge-warning">Real-World</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Feldman DI et al., NEJM Catalyst 2025 | USA | n=2,500+</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">Eligibility</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Established Providence patients, Medicare beneficiaries</li>
+                                <li>Diagnosis: Hypertension, Heart Failure (any EF), and/or Type 2 DM</li>
+                                <li>Proprietary algorithm for enrollment</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-primary/20">Remote Monitoring</summary>
+                        <div class="collapse-content">
+                            <p class="text-sm font-semibold mb-2">By Condition:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm mb-2">
+                                <li><strong>HTN:</strong> Blood pressure</li>
+                                <li><strong>HF:</strong> BP, HR, Weight</li>
+                                <li><strong>DM:</strong> Blood glucose</li>
+                            </ul>
+                            <p class="text-sm"><strong>Devices:</strong> Cellular-enabled (automatic transmission)</p>
+                            <p class="text-sm"><strong>Compliance:</strong> 61-76% meeting ≥16 vitals/month at 6 months</p>
+                            <p class="text-sm"><strong>Review:</strong> RN team 24/7/365; NPs address clinical alerts</p>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-success/20">Alert Volume</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>HTN:</strong> 9,153 high-acuity alerts (1,098 patients)</li>
+                                <li><strong>HF:</strong> 11,176 alerts (481 patients)</li>
+                                <li><strong>DM:</strong> 251 alerts (74 patients)</li>
+                                <li><strong>Escalation rate:</strong> <1% to longitudinal clinicians</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-secondary/20">Intervention (AI-Assisted)</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>Team:</strong> NP-led clinical team + RN 24/7 triage + non-clinical support</li>
+                                <li><strong>AI-assisted algorithms:</strong> Guideline-based tasks generated automatically</li>
+                                <li><strong>GDMT:</strong> Goal >50% target dose for each medication class</li>
+                                <li><strong>HF medications:</strong> RAASi: 75% at 6mo; BB: 95%; MRA: 59%; SGLT2i: 77%</li>
+                                <li><strong>Notes:</strong> All clinical notes published to Providence EHR</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/QJYQpsP4H3tTaRmbPyGumS/Copy-of-Scal.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 12: Algorithms Review -->
+        <div id="algorithms" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">Telemonitoring Algorithms Review</h2>
+                    <span class="badge badge-accent">Systematic Review</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Brons M et al., Eur J Heart Fail 2018 | 99 studies reviewed</p>
+                
+                <div class="grid grid-cols-1 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-success/20">Biometric Measurements Frequency (n=99 studies)</summary>
+                        <div class="collapse-content">
+                            <div class="flex flex-wrap gap-2">
+                                <span class="badge badge-lg badge-primary">Body weight 96%</span>
+                                <span class="badge badge-lg badge-primary">Blood pressure 85%</span>
+                                <span class="badge badge-lg badge-secondary">Heart rate 61%</span>
+                                <span class="badge badge-lg badge-secondary">SpO2 23%</span>
+                                <span class="badge badge-lg badge-accent">ECG/rhythm 17%</span>
+                                <span class="badge badge-lg badge-accent">Auscultation 7%</span>
+                                <span class="badge badge-lg badge-ghost">Temperature 6%</span>
+                                <span class="badge badge-lg badge-ghost">Blood glucose 5%</span>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-warning/20">Alert Thresholds Across Studies</summary>
+                        <div class="collapse-content">
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full text-sm">
+                                    <thead>
+                                        <tr><th>Parameter</th><th>Common Thresholds</th></tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr><td><strong>Weight gain (daily)</strong></td><td>>1-1.5 kg in 1 day; >2 kg in 2-3 days; >2.7 kg in 7 days</td></tr>
+                                        <tr><td><strong>Systolic BP</strong></td><td><90 mmHg or >140-180 mmHg</td></tr>
+                                        <tr><td><strong>Diastolic BP</strong></td><td><60 or >90-110 mmHg</td></tr>
+                                        <tr><td><strong>Heart rate</strong></td><td><50 or >80-120 bpm at rest</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-secondary/20">Algorithm Response Patterns</summary>
+                        <div class="collapse-content">
+                            <p class="text-sm font-semibold mb-2">Kurtz et al. Point-Based System:</p>
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>0 points (stable):</strong> Repeat measurements in 1 week</li>
+                                <li><strong>1 point (minor worsening):</strong> Repeat in 3 days</li>
+                                <li><strong>2 points (suspected deterioration):</strong> Medical visit, increase phone contacts</li>
+                                <li><strong>3 points (high risk):</strong> Direct connection to HF clinic professional</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/yHpriuTpZABUHfv4WsK2FJ/Copy-of-bron.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 13: JACC Statement -->
+        <div id="jacc" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">JACC Scientific Statement</h2>
+                    <span class="badge badge-accent">Guideline</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Stevenson LW et al., JACC 2023 | Expert Consensus</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-warning/20">Monitoring Intent Categories</summary>
+                        <div class="collapse-content">
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full text-sm">
+                                    <tr><th>Category</th><th>Risk Level</th><th>Intervention Frequency</th></tr>
+                                    <tr>
+                                        <td><strong>Routine Monitoring</strong></td>
+                                        <td>~20-30% HF event risk at 6mo</td>
+                                        <td>Initially weekly; decrease to monthly when stable</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>Long-Term Surveillance</strong></td>
+                                        <td>~10% HF event risk at 6mo</td>
+                                        <td>Rare until repeated exceptions</td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>"Hospital at Home"</strong></td>
+                                        <td>~50% readmission at 6mo</td>
+                                        <td>≥2x daily during IV diuretics</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-success/20">Key Decompensation Indicators</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li><strong>PA pressures:</strong> Rise ~4 weeks before HFH (HFrEF), ~3 weeks (HFpEF)</li>
+                                <li><strong>PAD target:</strong> 8-22 mmHg; >18 mmHg = higher risk</li>
+                                <li><strong>Thoracic impedance:</strong> ↓12% avg, ~18 days before HFH</li>
+                                <li><strong>ReDS lung water:</strong> Normal 28%; >35% predicts HFH</li>
+                                <li><strong>Weight:</strong> <2 lb increase typical before HFH (10-20% sensitivity)</li>
+                                <li><strong>HR:</strong> Nocturnal ↑ many days before HFH</li>
+                                <li><strong>HeartLogic alert:</strong> 10× risk when in alert zone</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200 lg:col-span-2">
+                        <summary class="collapse-title font-bold bg-primary/20">Response Time Recommendations</summary>
+                        <div class="collapse-content">
+                            <div class="overflow-x-auto">
+                                <table class="table table-compact w-full text-sm">
+                                    <tr><th>Setting</th><th>Response Time</th></tr>
+                                    <tr><td>Direct patient loop (app algorithm)</td><td>Immediate personalized instructions</td></tr>
+                                    <tr><td>Routine monitoring</td><td>Therapy change within 24-72 hours</td></tr>
+                                    <tr><td>Surveillance</td><td>Arrange clinical evaluation when triggered</td></tr>
+                                    <tr><td>Hospital at home</td><td>6-12 hours; 24/7 ongoing adjustment</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/PYfpRSsHY4RBwsnCyiHMGz/Copy-of-stev.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDY 14: Germany 20-Year Review -->
+        <div id="germany-review" class="study-section card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <div class="flex justify-between items-start">
+                    <h2 class="card-title text-2xl text-primary">Germany 20-Year Telemonitoring Journey</h2>
+                    <span class="badge badge-accent">Review</span>
+                </div>
+                <p class="text-sm opacity-70 mb-4">Spethmann S et al., JMIR 2024 | Narrative Review</p>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+                    <details class="collapse collapse-arrow bg-base-200" open>
+                        <summary class="collapse-title font-bold bg-info/20">G-BA Standard Care Criteria (Germany)</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>NYHA II-III with LVEF <40%</li>
+                                <li>Implanted cardiac device (ICD/CRT-P/D) OR HF hospitalization in past year</li>
+                                <li>Present treatment per current guidelines (GDMT)</li>
+                                <li>No factors compromising data transfer or self-management</li>
+                            </ul>
+                        </div>
+                    </details>
+
+                    <details class="collapse collapse-arrow bg-base-200">
+                        <summary class="collapse-title font-bold bg-secondary/20">G-BA Response Time Requirements</summary>
+                        <div class="collapse-content">
+                            <ul class="list-disc list-inside space-y-1 text-sm">
+                                <li>Data evaluation: ≥5 days/week</li>
+                                <li>Severely ill patients: Daily evaluation ("intensified monitoring")</li>
+                                <li>Alert processing: Must not exceed 24 hours</li>
+                                <li>Transmission to primary physician: Maximum 48 hours</li>
+                            </ul>
+                        </div>
+                    </details>
+                </div>
+                <div class="card-actions justify-end mt-4">
+                    <a href="https://myaidrive.com/v4MreN9eMhUqbWGczbmwoK/Copy-of-Tele.pdf" class="btn btn-primary btn-sm" download>📥 Download PDF</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- REFERENCES SECTION -->
+        <div id="references" class="card bg-base-100 shadow-xl mb-8">
+            <div class="card-body">
+                <h2 class="card-title text-2xl text-primary mb-4">📚 Complete Reference List</h2>
+                
+                <div class="overflow-x-auto" id="downloads">
+                    <table class="table table-zebra w-full">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Citation</th>
+                                <th>Study Type</th>
+                                <th>Download</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Koehler F et al. <em>Efficacy of telemedical interventional management in patients with heart failure (TIM-HF2).</em> Lancet 2018;392:1047-57.</td>
+                                <td><span class="badge badge-success">RCT</span></td>
+                                <td><a href="https://myaidrive.com/guKwgUo2jQosLANLq9WLcE/Copy-of-TIM-.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Koehler F et al. <em>Impact of Remote Telemedical Management on Mortality and Hospitalizations in Ambulatory Patients With Chronic Heart Failure (TIM-HF).</em> Circulation 2011;123:1873-80.</td>
+                                <td><span class="badge badge-success">RCT</span></td>
+                                <td><a href="https://myaidrive.com/dAdrk9zm4WPMNvJ3QkKtTH/TIM-HF-koehl.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Angermann CE et al. <em>Mode of Action and Effects of Standardized Collaborative Disease Management on Mortality and Morbidity in Patients With Systolic Heart Failure (INH Study).</em> Circ Heart Fail 2012;5:25-35.</td>
+                                <td><span class="badge badge-success">RCT</span></td>
+                                <td><a href="https://myaidrive.com/JPcMLYAN5KDyPiqTWHXDXf/Copy-of-ange.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Chaudhry SI et al. <em>Telemonitoring in Patients with Heart Failure (Tele-HF).</em> N Engl J Med 2010;363:2301-9.</td>
+                                <td><span class="badge badge-success">RCT</span></td>
+                                <td><a href="https://myaidrive.com/c39UQGdfRtaxPTfiJPzc3t/Copy-of-NEJM.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Galinier M et al. <em>Telemonitoring versus standard care in heart failure: a randomised multicentre trial (OSICAT).</em> Eur J Heart Fail 2020;22:985-994.</td>
+                                <td><span class="badge badge-success">RCT</span></td>
+                                <td><a href="https://myaidrive.com/bikmz8bgXgQpcG5LUYzWU5/Copy-of-Euro.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Poelzl G et al. <em>Feasibility and effectiveness of a multidimensional post-discharge disease management programme for heart failure patients: the HerzMobil Tirol programme.</em> Wien Klin Wochenschr 2021;133:1196-1209.</td>
+                                <td><span class="badge badge-warning">Observational</span></td>
+                                <td><a href="https://myaidrive.com/9a8vaxNpNpdvtBQAjBEZzN/Copy-of-Poel.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Sabatier R et al. <em>Impact of patient engagement in a French telemonitoring programme for heart failure on hospitalization and mortality (SCAD).</em> Eur J Heart Fail 2022;24:2132-2144.</td>
+                                <td><span class="badge badge-warning">Observational</span></td>
+                                <td><a href="https://myaidrive.com/uKUiYYxnZe96tczRsLEvmz/Copy-of-EHF2.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Jansen C et al. <em>Structuring telemonitoring in heart failure care in The Netherlands: design and operational protocol of a nationwide initiative.</em> ESC Heart Fail 2025.</td>
+                                <td><span class="badge badge-info">Protocol</span></td>
+                                <td><a href="https://myaidrive.com/fZRewvoNeoqnYMbpWZSUBS/Copy-of-Jans.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Ruiz-Bustillo S et al. <em>Effectiveness of a nurse-led telemedicine-based program for pharmacological and prognostic optimization of patients with heart failure and reduced ejection fraction: the MAR-HF-Titration study.</em> Eur J Cardiovasc Nurs 2025;24:1365-1374.</td>
+                                <td><span class="badge badge-warning">Prospective</span></td>
+                                <td><a href="https://myaidrive.com/XoU2LTPyT9JbaLJXciCWZ9/Copy-of-MAR-.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Girerd N et al. <em>Association of a remote monitoring programme with all-cause mortality and hospitalizations in patients with heart failure: National-scale, real-world evidence from a 3-year propensity score analysis of the TELESAT-HF study.</em> Eur J Heart Fail 2025.</td>
+                                <td><span class="badge badge-warning">Real-World</span></td>
+                                <td><a href="https://myaidrive.com/JTkC4HXuTN3YFoLdEeHjTc/Copy-of-Tele.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Feldman DI et al. <em>Scaling Remote Patient Care: The Mechanics of a Paradigm Shift in Chronic Disease Management.</em> NEJM Catalyst 2025.</td>
+                                <td><span class="badge badge-warning">Real-World</span></td>
+                                <td><a href="https://myaidrive.com/QJYQpsP4H3tTaRmbPyGumS/Copy-of-Scal.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Brons M et al. <em>Algorithms used in telemonitoring programmes for patients with chronic heart failure: A systematic review.</em> Eur J Heart Fail 2018;20:1601-1610.</td>
+                                <td><span class="badge badge-accent">Systematic Review</span></td>
+                                <td><a href="https://myaidrive.com/yHpriuTpZABUHfv4WsK2FJ/Copy-of-bron.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Stevenson LW et al. <em>Remote Monitoring for Heart Failure Management at Home: JACC Scientific Statement.</em> J Am Coll Cardiol 2023;81:2272-2291.</td>
+                                <td><span class="badge badge-accent">Guideline</span></td>
+                                <td><a href="https://myaidrive.com/PYfpRSsHY4RBwsnCyiHMGz/Copy-of-stev.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>14</td>
+                                <td>Spethmann S et al. <em>Telemonitoring for Chronic Heart Failure: Narrative Review of the 20-Year Journey From Concept to Standard Care in Germany.</em> JMIR 2024.</td>
+                                <td><span class="badge badge-accent">Review</span></td>
+                                <td><a href="https://myaidrive.com/v4MreN9eMhUqbWGczbmwoK/Copy-of-Tele.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>Möckel M et al. <em>Biomarker guidance allows a more personalized allocation of patients for remote patient management in heart failure: results from the TIM-HF2 trial.</em> Eur J Heart Fail 2019;21:1546-1559.</td>
+                                <td><span class="badge badge-info">Substudy</span></td>
+                                <td><a href="https://myaidrive.com/V7kjREPCrX67dgtrcnQuRm/Copy-of-TIM-.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>16</td>
+                                <td>Kerwagen F et al. <em>Remote patient management of heart failure across the ejection fraction spectrum: A pre-specified analysis of the TIM-HF2 trial.</em> Eur J Heart Fail 2023;25:61-71.</td>
+                                <td><span class="badge badge-info">Substudy</span></td>
+                                <td><a href="https://myaidrive.com/HHSwHrsXMt5kd4Hj3B4NBb/Copy-of-TIM-.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>Prescher S et al. <em>Patient reported experience and adherence to remote patient management in chronic heart failure patients: a posthoc analysis of the TIM-HF2 trial.</em> Eur J Heart Fail 2023.</td>
+                                <td><span class="badge badge-info">Substudy</span></td>
+                                <td><a href="https://myaidrive.com/zVEvpwyQWp8kESZqnbc9T2/Copy-of-TIM-.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>18</td>
+                                <td>Kerwagen F et al. <em>Rurality, travel distance, and effectiveness of remote patient management in patients with heart failure in the TIM-HF2 trial in Germany.</em> Lancet Digit Health 2025.</td>
+                                <td><span class="badge badge-info">Substudy</span></td>
+                                <td><a href="https://myaidrive.com/jAQCu2xafdKr9U67j9mukc/Copy-of-TIM-.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>19</td>
+                                <td>Koehler J et al. <em>Telemonitoring in patients with chronic heart failure and moderate depressed symptoms: results of the TIM-HF study.</em> Eur J Heart Fail 2021.</td>
+                                <td><span class="badge badge-info">Substudy</span></td>
+                                <td><a href="https://myaidrive.com/DamYkdFBDEEaE4mbKxV2Kj/Copy-of-Euro.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>20</td>
+                                <td>Winkler S et al. <em>Is 24/7 remote patient management in heart failure necessary? Results of the telemedical emergency service used in the TIM-HF and in the TIM-HF2 trials.</em> ESC Heart Fail 2021.</td>
+                                <td><span class="badge badge-info">Substudy</span></td>
+                                <td><a href="https://myaidrive.com/9AnLa5cNqH9xuBALijzg5j/Copy-of-rpm-.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>21</td>
+                                <td>Sydow H et al. <em>Cost-effectiveness of noninvasive telemedical interventional management in patients with heart failure: health economic analysis of the TIM-HF2 trial.</em> Eur J Heart Fail 2022.</td>
+                                <td><span class="badge badge-info">Economic</span></td>
+                                <td><a href="https://myaidrive.com/zKy9xbKyNuTvfW3Y4HYmhq/Copy-of-cost.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>Egelseer-Bruendl T et al. <em>Cost-effectiveness of a multidimensional post-discharge disease management program for heart failure patients (HerzMobil Tirol).</em> 2024.</td>
+                                <td><span class="badge badge-info">Economic</span></td>
+                                <td><a href="https://myaidrive.com/z9C4roVDshzQ6GWSh6snbd/Copy-of-cost.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>23</td>
+                                <td>Baudry G et al. <em>Cardiologist follow-up and improved outcomes of heart failure: a French nationwide cohort (French-DataHF).</em> Eur Heart J Acute Cardiovasc Care 2025.</td>
+                                <td><span class="badge badge-warning">Observational</span></td>
+                                <td><a href="https://myaidrive.com/JmD4kjNdm25JWewR45PBmc/Copy-of-Tele.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>24</td>
+                                <td>Malgie J et al. <em>Contemporary guideline-directed medical therapy in de novo, chronic, and worsening heart failure patients: First data from the TITRATE-HF study.</em> Eur J Heart Fail 2024.</td>
+                                <td><span class="badge badge-warning">Registry</span></td>
+                                <td><a href="https://myaidrive.com/4KbgWqwXTF9xbRyHsp38mK/Copy-of-GDMT.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                            <tr>
+                                <td>25</td>
+                                <td>Wright P. <em>Stronger hearts, smarter care: how telemedicine is transforming heart failure outcomes.</em> Eur J Cardiovasc Nurs 2025 (Commentary).</td>
+                                <td><span class="badge badge-ghost">Commentary</span></td>
+                                <td><a href="https://myaidrive.com/Xabr2pqvYsPbMM4DedscrV/Copy-of-zvaf.pdf" class="btn btn-xs btn-primary" download>PDF</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download All Section -->
+        <div class="card bg-gradient-to-r from-primary to-secondary text-primary-content mb-8">
+            <div class="card-body text-center">
+                <h2 class="card-title text-2xl justify-center mb-4">📦 Batch Download Options</h2>
+                <p class="mb-4">Access all original publications from this review</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="https://myaidrive.com/" class="btn btn-lg">View All Files in AI Drive</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer footer-center p-10 bg-base-300 text-base-content">
+        <div>
+            <p class="font-bold">Heart Failure Telemonitoring Studies - Comprehensive Review</p>
+            <p>Data extracted from 25 publications | Generated January 2026</p>
+            <p class="opacity-60">All information referenced to original publications. Click PDF links to download source documents.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
